@@ -353,7 +353,7 @@ int id large 0x7f0c0029
 int id left 0x7f0c0024
 int id listMode 0x7f0c0006
 int id list_item 0x7f0c003a
-int id login_button 0x7f0c004e
+int id login_button 0x7f0c004d
 int id messenger_send_button 0x7f0c0056
 int id middle 0x7f0c0011
 int id never 0x7f0c0016
@@ -385,7 +385,7 @@ int id split_action_bar 0x7f0c002f
 int id standard 0x7f0c001f
 int id submit_area 0x7f0c004a
 int id tabMode 0x7f0c0008
-int id textView 0x7f0c004d
+int id textView 0x7f0c004e
 int id title 0x7f0c003c
 int id top 0x7f0c0022
 int id top_action_bar 0x7f0c0031

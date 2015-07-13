@@ -1043,7 +1043,7 @@ containing a value of this type.
         public static final int left=0x7f0c0024;
         public static final int listMode=0x7f0c0006;
         public static final int list_item=0x7f0c003a;
-        public static final int login_button=0x7f0c004e;
+        public static final int login_button=0x7f0c004d;
         public static final int messenger_send_button=0x7f0c0056;
         public static final int middle=0x7f0c0011;
         public static final int never=0x7f0c0016;
@@ -1075,7 +1075,7 @@ containing a value of this type.
         public static final int standard=0x7f0c001f;
         public static final int submit_area=0x7f0c004a;
         public static final int tabMode=0x7f0c0008;
-        public static final int textView=0x7f0c004d;
+        public static final int textView=0x7f0c004e;
         public static final int title=0x7f0c003c;
         public static final int top=0x7f0c0022;
         public static final int top_action_bar=0x7f0c0031;
