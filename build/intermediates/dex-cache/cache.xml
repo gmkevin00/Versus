@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\文件\專題\Versus\Versus2\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="54732a25e1d3eb1a88dfc4f969eff4f3d4476f2c">
+        <dex dex="D:\文件\專題\Versus\Versus2\app\build\intermediates\pre-dexed\debug\classes-c0ef879c3596aef2645d6aef2cbd921677b642ab.jar" />
+    </item>
+    <item
+        jar="C:\Users\donkey\AndroidStudioProjects\Versus2\samples\SwitchUserSample\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\donkey\AndroidStudioProjects\Versus2\samples\SwitchUserSample\build\intermediates\pre-dexed\debug\classes-15d3dff5db5a8819aa62dbe41e76887a35678e05.jar" />
+    </item>
+    <item
+        jar="C:\Users\donkey\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="C:\Users\donkey\AndroidStudioProjects\Versus2\samples\SwitchUserSample\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-46cd782c1bebaa80a170cf73860d9e42970e3e82.jar" />
+    </item>
+    <item
+        jar="D:\文件\專題\Versus\Versus2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="D:\文件\專題\Versus\Versus2\app\build\intermediates\pre-dexed\debug\classes-734942413f93593a53c67c6fa39500baf34beab7.jar" />
+    </item>
+    <item
+        jar="D:\文件\專題\Versus\Versus2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="D:\文件\專題\Versus\Versus2\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-3a429134adf7ee90e3422fb701333e4fe30fcbc7.jar" />
+    </item>
+    <item
+        jar="C:\Users\donkey\AndroidStudioProjects\Versus2\samples\SwitchUserSample\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\donkey\AndroidStudioProjects\Versus2\samples\SwitchUserSample\build\intermediates\pre-dexed\debug\classes-eb9c5a1eb4e58281423a6e79b717913dfd3dd518.jar" />
+    </item>
+    <item
+        jar="C:\Users\donkey\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="D:\文件\專題\Versus\Versus2\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-46cd782c1bebaa80a170cf73860d9e42970e3e82.jar" />
+    </item>
+    <item
+        jar="C:\Users\donkey\AndroidStudioProjects\Versus2\samples\SwitchUserSample\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\donkey\AndroidStudioProjects\Versus2\samples\SwitchUserSample\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-daaa6794c7b4a2cf13db54d66ef8d61cf4e89f93.jar" />
+    </item>
+    <item
+        jar="C:\Users\donkey\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="D:\文件\專題\Versus\Versus2\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-bc58839a05dfca38fecab3fde6952aebc40d3182.jar" />
+    </item>
+    <item
+        jar="D:\文件\專題\Versus\Versus2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="D:\文件\專題\Versus\Versus2\app\build\intermediates\pre-dexed\debug\classes-7930d1a97732e508aa7bf41eabbb61393aead517.jar" />
+    </item>
+    <item
+        jar="C:\Users\donkey\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\donkey\AndroidStudioProjects\Versus2\samples\SwitchUserSample\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-bc58839a05dfca38fecab3fde6952aebc40d3182.jar" />
+    </item>
+    <item
+        jar="C:\Users\donkey\AndroidStudioProjects\Versus2\samples\SwitchUserSample\build\intermediates\exploded-aar\com.facebook.android\facebook\4.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="80259f1bfdc746c35eb31042b9ac0458e52a0585">
+        <dex dex="C:\Users\donkey\AndroidStudioProjects\Versus2\samples\SwitchUserSample\build\intermediates\pre-dexed\debug\classes-edfc5d083b7e72488f6eccfac44d3effac59290b.jar" />
+    </item>
+
+</items>
