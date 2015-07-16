@@ -39,7 +39,7 @@ public class MainActivity extends ActionBarActivity {
                         accessToken = loginResult.getAccessToken();
                         // App code
                         Profile profile = Profile.getCurrentProfile();
-
+                        Log.d("FB", profile.getId());
                         Log.d("FB", profile.getId());
                         //Log.d("FB", profile.get);
                         Log.d("FB", profile.getName());
