@@ -1,71 +1,64 @@
 package com.example.donkey.versus;
 
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.Profile;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
-
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 
 public class MainActivity extends ActionBarActivity {
     LoginButton loginButton;
     CallbackManager callbackManager;
+    TextView t1;
+    private AccessToken accessToken;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         FacebookSdk.sdkInitialize(getApplicationContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        t1=(TextView)findViewById(R.id.textView);
         callbackManager = CallbackManager.Factory.create();
+        loginButton.setReadPermissions("user_friends");
         loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
+                        accessToken = loginResult.getAccessToken();
                         // App code
+                        Profile profile = Profile.getCurrentProfile();
+
+                        Log.d("FB", profile.getId());
+                        //Log.d("FB", profile.get);
+                        Log.d("FB", profile.getName());
+
                     }
 
                     @Override
                     public void onCancel() {
                         // App code
+                        Log.d("FB","Cancel");
                     }
 
                     @Override
                     public void onError(FacebookException exception) {
                         // App code
+                        Log.d("FB","fail");
                     }
                 });
-        try {
-            PackageInfo info = getPackageManager().getPackageInfo(
-                    "com.donkey.Versus",
-                    PackageManager.GET_SIGNATURES);
-            for (Signature signature : info.signatures) {
-                MessageDigest md = null;
-                try {
-                    md = MessageDigest.getInstance("SHA");
-                } catch (NoSuchAlgorithmException e) {
-                    e.printStackTrace();
-                }
-                md.update(signature.toByteArray());
-                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
-            }
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
+        Log.d("FB", "XDDDDDD");
 
     }
     @Override
