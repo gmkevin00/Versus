@@ -22,6 +22,7 @@ import com.facebook.Profile;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -39,6 +40,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         t1=(TextView)findViewById(R.id.textView);
         b1=(Button)findViewById(R.id.button1);
+        b1.setOnClickListener(this);
         callbackManager = CallbackManager.Factory.create();
         loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions("user_friends");
@@ -122,16 +124,21 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        phpConnect p=new phpConnect();
-        p.setUrl("http://140.115.80.235/~test/room.php");
-        p.execute();
-        try {
-            JSONObject jsonobject = p.getJSON().getJSONObject(0);
-            String text = jsonobject.getString("user_name");
-            Log.d("php",text);
-        } catch (JSONException e) {
-            e.printStackTrace();
-            Log.d("php","fail");
-        }
+        phpConnect p=new phpConnect(this,"讀取資料中,請稍後...");
+        p.setUrl("http://140.115.80.225/~group5/donkey00/room.php");
+        p.execute(new GetUserCallback() {
+            @Override
+            public void done(JSONArray jsonarray) {
+                try {
+                    JSONObject jsonobject = jsonarray.getJSONObject(0);
+                    String text = jsonobject.getString("user_name");
+                    Log.d("php",text);
+                    Log.d("php",String.format("%d", jsonarray.length()));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d("php","fail");
+                }
+            }
+        });
     }
 }

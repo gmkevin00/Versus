@@ -4,8 +4,9 @@ package com.example.donkey.versus;
  * Created by donkey on 2015/7/1.
  */
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -18,13 +19,15 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class phpConnect {
+    ProgressDialog progressdialog;
+    GetUserCallback userCallback;
     private URL url;
     private HttpURLConnection conn;
-    private int jsonCount=0;
-    private boolean finish=false;
-    private JSONArray jsonarray;
-    public void setFinish(boolean finish){
-        this.finish=finish;
+    public phpConnect(Context showContext,String text){
+        progressdialog=new ProgressDialog(showContext);
+        progressdialog.setCancelable(false);
+        progressdialog.setTitle("處理中");
+        progressdialog.setMessage(text);
     }
     public void setUrl(String urlString){
         try {
@@ -34,46 +37,18 @@ public class phpConnect {
             e.printStackTrace();
         }
     }
-    public void setJSON(JSONArray jsonarray){
-        this.jsonarray=jsonarray;
+    public void execute(GetUserCallback userCallback) {
+        progressdialog.show();
+        new phpDataExchange(userCallback).execute();
     }
-    public void setCount(int jsonCount){
-        this.jsonCount=jsonCount;
-    }
-    public JSONArray getJSON(){
-        while(finish==false){
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            if(finish==true){
-                break;
-            }
+    public class phpDataExchange extends AsyncTask<Void, Void, JSONArray>{
+        GetUserCallback userCallback;
+        JSONArray jsonarray=new JSONArray();
+        public phpDataExchange(GetUserCallback userCallback){
+            this.userCallback=userCallback;
         }
-        return jsonarray;
-    }
-    public int getCount(){
-        while(finish==false){
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            if(finish==true){
-                break;
-            }
-        }
-        return jsonCount;
-    }
-    public void execute() {
-        new phpDataExchange().execute();
-    }
-
-
-    public class phpDataExchange extends AsyncTask{
         @Override
-        protected Object doInBackground(Object[] params) {
+        protected JSONArray doInBackground(Void[] arg0) {
             try {
                 conn = (HttpURLConnection)url.openConnection();
                 conn.setRequestMethod("GET");
@@ -83,18 +58,12 @@ public class phpConnect {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream(),"UTF-8"));
                 StringBuilder sb = new StringBuilder();
                 String line = null;
-                int count=0;
                 while ((line = reader.readLine()) != null) {
                     sb.append(line + "\n");
-                    count++;
-                    Log.i("CountCount", "XD");
                 }
                 reader.close();
                 try {
-                    JSONArray j=new JSONArray(sb.toString());
-                    setJSON(j);
-                    setCount(count);
-                    setFinish(true);
+                    jsonarray=new JSONArray(sb.toString());
                 } catch (JSONException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -107,7 +76,12 @@ public class phpConnect {
                     conn.disconnect();
                 }
             }
-            return null;
+        return null;
+        }
+        protected void onPostExecute(JSONArray result){
+            super.onPostExecute(result);
+           progressdialog.dismiss();
+            userCallback.done(jsonarray);
         }
     }
 }
