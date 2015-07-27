@@ -1,10 +1,11 @@
 package com.example.donkey.versus;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by donkey on 2015/7/19.
  */
-public class User {
+public class User implements Serializable {
     private int user_id;
     private String user_fbid;
     private String user_name;

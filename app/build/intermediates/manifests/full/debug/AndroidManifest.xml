@@ -47,6 +47,11 @@ facebook-android-sdk
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.example.donkey.versus.RoomHomeActivity"
+            android:label="@string/title_activity_room_home" >
+        </activity>
     </application>
 
 </manifest>
