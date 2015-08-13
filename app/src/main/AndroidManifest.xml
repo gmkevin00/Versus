@@ -17,6 +17,19 @@ facebook-android-sdk
 4.3.0
         </version>
     </dependency>
+    <dependency>
+        <groupId>
+com.squareup.picasso
+        </groupId>
+
+        <artifactId>
+picasso
+        </artifactId>
+
+        <version>
+2.5.2
+        </version>
+    </dependency>
 
     <application
         android:allowBackup="true"
@@ -45,6 +58,18 @@ facebook-android-sdk
         <activity
             android:name=".RoomHomeActivity"
             android:label="@string/title_activity_room_home" >
+        </activity>
+        <activity
+            android:name=".newRoomActivity"
+            android:label="@string/title_activity_new_room" >
+        </activity>
+        <activity
+            android:name=".inviteFriendActivity"
+            android:label="@string/title_activity_invite_friend" >
+        </activity>
+        <activity
+            android:name=".testActivity"
+            android:label="@string/title_activity_test" >
         </activity>
     </application>
 

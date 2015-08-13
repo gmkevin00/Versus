@@ -5,7 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -40,7 +43,7 @@ public class RoomListAdapter extends BaseAdapter {
         if(convertView==null){
             convertView = inflater.inflate(R.layout.roomlist_item, null);
             holder = new ViewHolder(
-                    (TextView) convertView.findViewById(R.id.photo),
+                    (ImageView) convertView.findViewById(R.id.imageView),
                     (TextView) convertView.findViewById(R.id.name),
                     (TextView) convertView.findViewById(R.id.start),
                     (TextView) convertView.findViewById(R.id.end),
@@ -51,7 +54,7 @@ public class RoomListAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         Room r=(Room)getItem(position);
-        holder.photo.setText(String.format("%d",r.getRoomId()));
+        Picasso.with(parent.getContext()).load(String.format("https://graph.facebook.com/%s/picture",r.getRoomBoss())).into(holder.photo);
         holder.name.setText(r.getRoomName());
         holder.start.setText(r.getRoomStart());
         holder.end.setText(r.getRoomEnd());
@@ -60,17 +63,23 @@ public class RoomListAdapter extends BaseAdapter {
     }
 
     private class ViewHolder {
-        TextView photo;
+        ImageView photo;
         TextView name;
         TextView start;
         TextView end;
         TextView star;
-        public ViewHolder(TextView photo, TextView name, TextView start, TextView end, TextView star){
+        public ViewHolder(ImageView photo, TextView name, TextView start, TextView end, TextView star){
             this.photo=photo;
             this.name=name;
             this.start=start;
             this.end=end;
             this.star=star;
         }
+    }
+
+    public void updateResults(ArrayList<Room> RoomUser) {
+        this.RoomUser=RoomUser;
+        //Triggers the list update
+        notifyDataSetChanged();
     }
 }

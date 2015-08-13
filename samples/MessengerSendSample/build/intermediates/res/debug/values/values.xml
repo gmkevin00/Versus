@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/donkey/AndroidStudioProjects/Versus2/samples/MessengerSendSample/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/samples/MessengerSendSample/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -30,7 +30,7 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <!-- From: file:/C:/Users/donkey/AndroidStudioProjects/Versus2/samples/MessengerSendSample/build/intermediates/exploded-aar/com.facebook.android/facebook/4.3.0/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/samples/MessengerSendSample/build/intermediates/exploded-aar/com.facebook.android/facebook/4.3.0/res/values/values.xml -->
     <eat-comment/>
     <color name="com_facebook_blue">#3B5998</color>
     <color name="com_facebook_button_background_color">#415dae</color>
@@ -45,7 +45,7 @@
     <color name="com_facebook_likeboxcountview_text_color">#6a7180</color>
     <color name="com_facebook_likeview_text_color">#6a7180</color>
     <color name="com_facebook_share_button_text_color">#FFFFFF</color>
-    <!-- From: file:/C:/Users/donkey/AndroidStudioProjects/Versus2/samples/MessengerSendSample/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/samples/MessengerSendSample/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
@@ -141,7 +141,7 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/C:/Users/donkey/AndroidStudioProjects/Versus2/samples/MessengerSendSample/build/intermediates/exploded-aar/com.facebook.android/facebook/4.3.0/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/samples/MessengerSendSample/build/intermediates/exploded-aar/com.facebook.android/facebook/4.3.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="com_facebook_likeboxcountview_border_radius">3dp</dimen>
     <dimen name="com_facebook_likeboxcountview_border_width">1dp</dimen>
@@ -162,7 +162,7 @@
     <dimen name="com_facebook_share_button_padding_top">12dp</dimen>
     <dimen name="com_facebook_share_button_text_size">16.0sp</dimen>
     <dimen name="com_facebook_tooltip_horizontal_padding">10dp</dimen>
-    <!-- From: file:/C:/Users/donkey/AndroidStudioProjects/Versus2/samples/MessengerSendSample/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/samples/MessengerSendSample/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -196,10 +196,10 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/C:/Users/donkey/AndroidStudioProjects/Versus2/samples/MessengerSendSample/src/main/res/values/strings.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/samples/MessengerSendSample/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">Messenger SDK Sample</string>
-    <!-- From: file:/C:/Users/donkey/AndroidStudioProjects/Versus2/samples/MessengerSendSample/build/intermediates/exploded-aar/com.facebook.android/facebook/4.3.0/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/samples/MessengerSendSample/build/intermediates/exploded-aar/com.facebook.android/facebook/4.3.0/res/values/values.xml -->
     <eat-comment/>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -217,13 +217,13 @@
     <string name="com_facebook_send_button_text">Send</string>
     <string name="com_facebook_share_button_text">Share</string>
     <string name="com_facebook_tooltip_default">New! You\'re in control - choose what info you want to share with apps.</string>
-    <!-- From: file:/C:/Users/donkey/AndroidStudioProjects/Versus2/samples/MessengerSendSample/src/main/res/values/strings.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/samples/MessengerSendSample/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="facebook_app_id">434629220047124</string>
-    <!-- From: file:/C:/Users/donkey/AndroidStudioProjects/Versus2/samples/MessengerSendSample/build/intermediates/exploded-aar/com.facebook.android/facebook/4.3.0/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/samples/MessengerSendSample/build/intermediates/exploded-aar/com.facebook.android/facebook/4.3.0/res/values/values.xml -->
     <eat-comment/>
     <string name="messenger_send_button_text">Send</string>
-    <!-- From: file:/C:/Users/donkey/AndroidStudioProjects/Versus2/samples/MessengerSendSample/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/samples/MessengerSendSample/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance">
         <item name="android:textColor">?android:textColorPrimary</item>
@@ -977,7 +977,7 @@
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/C:/Users/donkey/AndroidStudioProjects/Versus2/samples/MessengerSendSample/build/intermediates/exploded-aar/com.facebook.android/facebook/4.3.0/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/samples/MessengerSendSample/build/intermediates/exploded-aar/com.facebook.android/facebook/4.3.0/res/values/values.xml -->
     <eat-comment/>
     <style name="MessengerButton">
     <item name="android:clickable">true</item>
@@ -1037,7 +1037,7 @@
     <style name="MessengerButtonText.White.Small">
     <item name="android:drawableLeft">@drawable/messenger_bubble_small_blue</item>
   </style>
-    <!-- From: file:/C:/Users/donkey/AndroidStudioProjects/Versus2/samples/MessengerSendSample/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/samples/MessengerSendSample/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -1323,7 +1323,7 @@
     <style name="Widget.AppCompat.Spinner.DropDown.ActionBar" parent="Base.Widget.AppCompat.Spinner.DropDown.ActionBar"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
-    <!-- From: file:/C:/Users/donkey/AndroidStudioProjects/Versus2/samples/MessengerSendSample/build/intermediates/exploded-aar/com.facebook.android/facebook/4.3.0/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/samples/MessengerSendSample/build/intermediates/exploded-aar/com.facebook.android/facebook/4.3.0/res/values/values.xml -->
     <eat-comment/>
     <style name="com_facebook_button" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/com_facebook_button_background</item>

@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="drawer_menu">
+        <item>Apple</item>
+        <item>Book</item>
+        <item>Cat</item>
+        <item>Dog</item>
+        <item>Eagle</item>
+        <item>Food</item>
+        <item>God</item>
+        <item>House</item>
+        <item>Iron</item>
+        <item>Jingle</item>
+    </string-array>
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.0.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="actionBarDivider"/>
     <attr format="reference" name="actionBarItemBackground"/>
@@ -89,14 +103,24 @@
     <color name="com_facebook_likeboxcountview_text_color">#6a7180</color>
     <color name="com_facebook_likeview_text_color">#6a7180</color>
     <color name="com_facebook_share_button_text_color">#FFFFFF</color>
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.github.navasmdc/MaterialDesign/1.5/res/values/values.xml -->
+    <eat-comment/>
+    <color name="green">#00FF00</color>
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.ikimuhendis/ldrawer/0.1/res/values/values.xml -->
+    <eat-comment/>
+    <color name="ldrawer_color">#FFFFFF</color>
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.github.navasmdc/MaterialDesign/1.5/res/values/values.xml -->
+    <eat-comment/>
+    <color name="thumbColor">#66aaaaaa</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr format="dimension" name="itemPadding"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
-    <declare-styleable name="ActionBarWindow"><attr format="boolean" name="windowActionBar"/><attr format="boolean" name="windowActionBarOverlay"/><attr format="boolean" name="windowSplitActionBar"/><attr format="dimension|fraction" name="windowFixedWidthMajor"/><attr format="dimension|fraction" name="windowFixedHeightMinor"/><attr format="dimension|fraction" name="windowFixedWidthMinor"/><attr format="dimension|fraction" name="windowFixedHeightMajor"/></declare-styleable>
+    <declare-styleable name="ActionBarWindow"><attr format="boolean" name="windowActionBar"/><attr format="boolean" name="windowActionBarOverlay"/><attr format="boolean" name="windowSplitActionBar"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
     <declare-styleable name="ActionMenuView"/>
     <declare-styleable name="ActionMode"><attr name="titleTextStyle"/><attr name="subtitleTextStyle"/><attr name="background"/><attr name="backgroundSplit"/><attr name="height"/></declare-styleable>
     <declare-styleable name="ActivityChooserView"><attr format="string" name="initialActivityCount"/><attr format="reference" name="expandActivityOverflowButtonDrawable"/></declare-styleable>
     <declare-styleable name="CompatTextView"><attr format="reference|boolean" name="textAllCaps"/></declare-styleable>
+    <declare-styleable name="CustomAttributes"><attr format="color|reference" name="rippleColor"/><attr format="float" name="rippleSpeed"/><attr format="boolean" name="showNumberIndicator"/><attr format="integer" name="max"/><attr format="integer" name="min"/><attr format="integer" name="value"/><attr format="integer" name="progress"/><attr format="dimension" name="ringWidth"/><attr format="boolean" name="check"/><attr format="dimension" name="checkBoxSize"/><attr format="dimension" name="thumbSize"/><attr format="integer" name="iconDrawable"/><attr format="dimension" name="iconSize"/><attr format="boolean" name="animate"/><attr format="float" name="rippleBorderRadius"/><attr format="boolean" name="clickAfterRipple"/></declare-styleable>
     <declare-styleable name="LinearLayoutICS"><attr name="divider"/><attr name="showDividers"><flag name="none" value="0"/><flag name="beginning" value="1"/><flag name="middle" value="2"/><flag name="end" value="4"/></attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction"><flag name="never" value="0"/><flag name="ifRoom" value="1"/><flag name="always" value="2"/><flag name="withText" value="4"/><flag name="collapseActionView" value="8"/></attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
@@ -108,7 +132,7 @@
     <declare-styleable name="com_facebook_like_view"><attr format="color" name="com_facebook_foreground_color"/><attr format="string" name="com_facebook_object_id"/><attr name="com_facebook_object_type"><enum name="unknown" value="0"/><enum name="open_graph" value="1"/><enum name="page" value="2"/></attr><attr name="com_facebook_style"><enum name="standard" value="0"/><enum name="button" value="1"/><enum name="box_count" value="2"/></attr><attr name="com_facebook_auxiliary_view_position"><enum name="bottom" value="0"/><enum name="inline" value="1"/><enum name="top" value="2"/></attr><attr name="com_facebook_horizontal_alignment"><enum name="center" value="0"/><enum name="left" value="1"/><enum name="right" value="2"/></attr></declare-styleable>
     <declare-styleable name="com_facebook_login_view"><attr format="boolean" name="com_facebook_confirm_logout"/><attr format="string" name="com_facebook_login_text"/><attr format="string" name="com_facebook_logout_text"/><attr name="com_facebook_tooltip_mode"><enum name="automatic" value="0"/><enum name="display_always" value="1"/><enum name="never_display" value="2"/></attr></declare-styleable>
     <declare-styleable name="com_facebook_profile_picture_view"><attr name="com_facebook_preset_size"><enum name="small" value="-2"/><enum name="normal" value="-3"/><enum name="large" value="-4"/></attr><attr format="boolean" name="com_facebook_is_cropped"/></declare-styleable>
-    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.0.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_default_height">48dip</dimen>
     <dimen name="abc_action_bar_icon_vertical_padding">8dip</dimen>
@@ -152,12 +176,16 @@
     <dimen name="com_facebook_share_button_padding_top">12dp</dimen>
     <dimen name="com_facebook_share_button_text_size">16.0sp</dimen>
     <dimen name="com_facebook_tooltip_horizontal_padding">10dp</dimen>
-    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.ikimuhendis/ldrawer/0.1/res/values/values.xml -->
     <eat-comment/>
-    <item name="dialog_fixed_height_major" type="dimen">80%</item>
-    <item name="dialog_fixed_height_minor" type="dimen">100%</item>
-    <item name="dialog_fixed_width_major" type="dimen">320dp</item>
-    <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
+    <dimen name="ldrawer_barSize">18dp</dimen>
+    <dimen name="ldrawer_drawableSize">50dp</dimen>
+    <dimen name="ldrawer_gapBetweenBars">3dp</dimen>
+    <dimen name="ldrawer_middleBarArrowSize">16dp</dimen>
+    <dimen name="ldrawer_thickness">2dp</dimen>
+    <dimen name="ldrawer_topBottomBarArrowSize">11dp</dimen>
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.0.1/res/values/values.xml -->
+    <eat-comment/>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
@@ -202,6 +230,8 @@
     <string name="com_facebook_tooltip_default">New! You\'re in control - choose what info you want to share with apps.</string>
     <!-- From: file:/D:/文件/專題/Versus/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="drawer_open">Open navigation drawer</string>
     <string name="facebook_app_id">861698163925132</string>
     <string name="hello_world">Hello world!</string>
     <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.3.0/res/values/values.xml -->
@@ -209,7 +239,10 @@
     <string name="messenger_send_button_text">Send</string>
     <!-- From: file:/D:/文件/專題/Versus/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="title_activity_invite_friend">inviteFriendActivity</string>
+    <string name="title_activity_new_room">newRoomActivity</string>
     <string name="title_activity_room_home">RoomHomeActivity</string>
+    <string name="title_activity_test">testActivity</string>
     <!-- From: file:/D:/文件/專題/Versus/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -275,7 +308,7 @@
     <style name="MessengerButtonText.White.Small">
     <item name="android:drawableLeft">@drawable/messenger_bubble_small_blue</item>
   </style>
-    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.AppCompat.Base.CompactMenu.Dialog" parent="android:TextAppearance.Medium">
         <item name="android:textColor">@android:color/primary_text_light</item>
@@ -407,7 +440,6 @@
     </style>
     <style name="Theme.AppCompat.CompactMenu" parent="Theme.AppCompat.Base.CompactMenu"/>
     <style name="Theme.AppCompat.CompactMenu.Dialog" parent="Theme.AppCompat.Base.CompactMenu.Dialog"/>
-    <style name="Theme.AppCompat.DialogWhenLarge" parent="Theme.Base.AppCompat.DialogWhenLarge"/>
     <style name="Theme.AppCompat.Light" parent="Theme.Base.AppCompat.Light">
         <item name="isLightTheme">true</item>
 
@@ -476,7 +508,6 @@
         <!-- ShareActionProvider attributes -->
         <item name="activityChooserViewStyle">@style/Widget.AppCompat.ActivityChooserView</item>
     </style>
-    <style name="Theme.AppCompat.Light.DialogWhenLarge" parent="Theme.Base.AppCompat.Light.DialogWhenLarge"/>
     <style name="Theme.Base" parent="android:Theme"/>
     <style name="Theme.Base.AppCompat" parent="Theme.Base">
         <item name="windowActionBar">true</item>
@@ -525,42 +556,6 @@
         <item name="android:panelBackground">@drawable/abc_menu_hardkey_panel_holo_dark</item>
         <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
     </style>
-    <style name="Theme.Base.AppCompat.Dialog.FixedSize" parent="android:Theme.Dialog">
-        <item name="windowFixedWidthMajor">@dimen/dialog_fixed_width_major</item>
-        <item name="windowFixedWidthMinor">@dimen/dialog_fixed_width_minor</item>
-        <item name="windowFixedHeightMajor">@dimen/dialog_fixed_height_major</item>
-        <item name="windowFixedHeightMinor">@dimen/dialog_fixed_height_minor</item>
-        <item name="windowActionBar">true</item>
-        <!-- Remove system title bars; we will add the action bar ourselves. -->
-        <item name="android:windowNoTitle">true</item>
-        <item name="buttonBarStyle">@android:style/ButtonBar</item>
-        <item name="buttonBarButtonStyle">@android:style/Widget.Button</item>
-        <item name="selectableItemBackground">@drawable/abc_item_background_holo_dark</item>
-        <item name="dividerVertical">@drawable/abc_list_divider_holo_dark</item>
-        <item name="dividerHorizontal">@drawable/abc_list_divider_holo_dark</item>
-        <item name="listPreferredItemHeight">?android:attr/listPreferredItemHeight</item>
-        <item name="listPreferredItemHeightSmall">48dp</item>
-        <item name="listPreferredItemHeightLarge">80dp</item>
-        <item name="listPreferredItemPaddingLeft">8dip</item>
-        <item name="listPreferredItemPaddingRight">8dip</item>
-        <item name="textAppearanceListItem">?android:attr/textAppearanceMedium</item>
-        <item name="textAppearanceListItemSmall">?android:attr/textAppearanceMedium</item>
-
-        <!-- Action Mode -->
-        <item name="actionModeStyle">@style/Widget.AppCompat.ActionMode</item>
-        <item name="actionModeBackground">@drawable/abc_cab_background_top_holo_dark</item>
-        <item name="actionModeSplitBackground">@drawable/abc_cab_background_bottom_holo_dark</item>
-        <item name="actionModeCloseDrawable">@drawable/abc_ic_cab_done_holo_dark</item>
-        <item name="actionModeCloseButtonStyle">@style/Widget.AppCompat.ActionButton.CloseMode</item>
-
-        <!-- Panel attributes -->
-        <item name="panelMenuListWidth">@dimen/abc_panel_menu_list_width</item>
-        <item name="panelMenuListTheme">@style/Theme.AppCompat.CompactMenu</item>
-        <item name="android:panelBackground">@drawable/abc_menu_hardkey_panel_holo_dark</item>
-        <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
-    </style>
-    <style name="Theme.Base.AppCompat.Dialog.Light.FixedSize" parent="Theme.Base.AppCompat.Dialog.FixedSize"/>
-    <style name="Theme.Base.AppCompat.DialogWhenLarge" parent="Theme.Base.AppCompat"/>
     <style name="Theme.Base.AppCompat.Light" parent="Theme.Base.Light">
         <item name="windowActionBar">true</item>
         <!-- Remove system title bars; we will add the action bar ourselves. -->
@@ -636,7 +631,6 @@
         <item name="android:panelBackground">@drawable/abc_menu_hardkey_panel_holo_dark</item>
         <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
     </style>
-    <style name="Theme.Base.AppCompat.Light.DialogWhenLarge" parent="Theme.Base.AppCompat.Light"/>
     <style name="Theme.Base.Light" parent="android:Theme.Light"/>
     <style name="Widget.AppCompat.ActionBar" parent="Widget.AppCompat.Base.ActionBar"/>
     <style name="Widget.AppCompat.ActionBar.Solid" parent="Widget.AppCompat.Base.ActionBar.Solid"/>

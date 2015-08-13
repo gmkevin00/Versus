@@ -13,7 +13,7 @@ android {
     defaultConfig {
         applicationId "com.example.donkey.versus"
         minSdkVersion 19
-        targetSdkVersion 22
+        targetSdkVersion 19
         versionCode 1
         versionName "1.0"
     }
@@ -28,5 +28,8 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.facebook.android:facebook-android-sdk:4.3.0'
-    compile 'com.android.support:appcompat-v7:19.+'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
+    compile 'com.ikimuhendis:ldrawer:0.1'
+    compile 'com.android.support:appcompat-v7:19.0.+'
 }

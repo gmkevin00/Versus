@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.donkey.versus.newRoomActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="房間名稱:"
+        android:id="@+id/roomNameTxt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/newRoomName"
+        android:layout_alignTop="@+id/roomNameTxt"
+        android:layout_toEndOf="@+id/roomNameTxt"
+        android:layout_marginStart="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="挑戰分類:"
+        android:id="@+id/textView"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/newRoomName"
+        android:layout_toStartOf="@+id/newRoomName" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newChallengeType"
+        android:spinnerMode="dialog"
+        android:layout_below="@+id/newRoomName"
+        android:layout_alignStart="@+id/newRoomName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="挑戰名稱:"
+        android:id="@+id/textView2"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/newChallengeType"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/newChallengeName"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignStart="@+id/newChallengeType" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隨機產生"
+        android:id="@+id/getRandomChallengeButton"
+        android:layout_below="@+id/newChallengeName"
+        android:layout_alignEnd="@+id/newRoomStart" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="開始時間:"
+        android:id="@+id/textView3"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/getRandomChallengeButton"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="結束時間:"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/newRoomStart"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cycleSpinner"
+        android:spinnerMode="dialog"
+        android:layout_below="@+id/newRoomEnd"
+        android:layout_alignEnd="@+id/getRandomChallengeButton"
+        android:layout_alignStart="@+id/newChallengeName" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按我設定"
+        android:id="@+id/newRoomStart"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按我設定"
+        android:id="@+id/newRoomEnd"
+        android:layout_below="@+id/newRoomStart"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="目標設定:"
+        android:id="@+id/textView6"
+        android:layout_alignTop="@+id/cycleSpinner"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="邀請朋友"
+        android:id="@+id/inviteButton"
+        android:layout_below="@+id/cycleSpinner"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/addRoomButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新增房間"
+        android:id="@+id/addRoomButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/newRoomEnd"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/inviteButton" />
+
+</RelativeLayout>

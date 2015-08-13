@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-v14/values.xml -->
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.0.1/res/values-v14/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.AppCompat.Base.SearchResult.Subtitle" parent="@android:TextAppearance.Holo.SearchResult.Subtitle"/>
     <style name="TextAppearance.AppCompat.Base.SearchResult.Title" parent="@android:TextAppearance.Holo.SearchResult.Title"/>
@@ -20,31 +20,6 @@
     <style name="TextAppearance.AppCompat.Widget.Base.ActionMode.Title" parent="android:TextAppearance.Holo.Widget.ActionMode.Title"/>
     <style name="TextAppearance.AppCompat.Widget.Base.ActionMode.Title.Inverse" parent="android:TextAppearance.Holo.Widget.ActionMode.Title.Inverse"/>
     <style name="Theme.Base.AppCompat" parent="android:Theme.Holo">
-
-        <!-- Copy system flag values for our use -->
-        <item name="windowActionBar">?android:attr/windowActionBar</item>
-        <item name="actionBarSize">?android:attr/actionBarSize</item>
-        <item name="actionBarItemBackground">?android:attr/actionBarItemBackground</item>
-        <item name="selectableItemBackground">?android:attr/selectableItemBackground</item>
-        <item name="actionButtonStyle">?android:attr/actionButtonStyle</item>
-        <item name="dividerVertical">?android:attr/dividerVertical</item>
-        <item name="dividerHorizontal">?android:attr/dividerHorizontal</item>
-        <item name="actionBarWidgetTheme">@null</item>
-        <item name="android:actionBarWidgetTheme">?attr/actionBarWidgetTheme</item>
-
-        <!-- Required for use of support_simple_spinner_dropdown_item.xml -->
-        <item name="listPreferredItemHeight">?android:attr/listPreferredItemHeight</item>
-        <item name="listPreferredItemHeightSmall">?android:attr/listPreferredItemHeightSmall</item>
-        <item name="listPreferredItemHeightLarge">?android:attr/listPreferredItemHeightLarge</item>
-        <item name="listPreferredItemPaddingLeft">?android:attr/listPreferredItemPaddingLeft</item>
-        <item name="listPreferredItemPaddingRight">?android:attr/listPreferredItemPaddingRight</item>
-
-        <!-- Attributes populated from the framework to be read by apps -->
-        <item name="buttonBarStyle">?android:attr/buttonBarStyle</item>
-        <item name="buttonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
-    </style>
-    <style name="Theme.Base.AppCompat.DialogWhenLarge" parent="Theme.Base.AppCompat.DialogWhenLarge.Base"/>
-    <style name="Theme.Base.AppCompat.DialogWhenLarge.Base" parent="android:Theme.Holo.DialogWhenLarge">
 
         <!-- Copy system flag values for our use -->
         <item name="windowActionBar">?android:attr/windowActionBar</item>
@@ -103,31 +78,6 @@
         <item name="dividerVertical">?android:attr/dividerVertical</item>
         <item name="dividerHorizontal">?android:attr/dividerHorizontal</item>
         <item name="actionBarWidgetTheme">@style/Theme.AppCompat</item>
-        <item name="android:actionBarWidgetTheme">?attr/actionBarWidgetTheme</item>
-
-        <!-- Required for use of support_simple_spinner_dropdown_item.xml -->
-        <item name="listPreferredItemHeight">?android:attr/listPreferredItemHeight</item>
-        <item name="listPreferredItemHeightSmall">?android:attr/listPreferredItemHeightSmall</item>
-        <item name="listPreferredItemHeightLarge">?android:attr/listPreferredItemHeightLarge</item>
-        <item name="listPreferredItemPaddingLeft">?android:attr/listPreferredItemPaddingLeft</item>
-        <item name="listPreferredItemPaddingRight">?android:attr/listPreferredItemPaddingRight</item>
-
-        <!-- Attributes populated from the framework to be read by apps -->
-        <item name="buttonBarStyle">?android:attr/buttonBarStyle</item>
-        <item name="buttonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
-    </style>
-    <style name="Theme.Base.AppCompat.Light.DialogWhenLarge" parent="Theme.Base.AppCompat.Light.DialogWhenLarge.Base"/>
-    <style name="Theme.Base.AppCompat.Light.DialogWhenLarge.Base" parent="android:Theme.Holo.Light.DialogWhenLarge">
-
-        <!-- Copy system flag values for our use -->
-        <item name="windowActionBar">?android:attr/windowActionBar</item>
-        <item name="actionBarSize">?android:attr/actionBarSize</item>
-        <item name="actionBarItemBackground">?android:attr/actionBarItemBackground</item>
-        <item name="selectableItemBackground">?android:attr/selectableItemBackground</item>
-        <item name="actionButtonStyle">?android:attr/actionButtonStyle</item>
-        <item name="dividerVertical">?android:attr/dividerVertical</item>
-        <item name="dividerHorizontal">?android:attr/dividerHorizontal</item>
-        <item name="actionBarWidgetTheme">@null</item>
         <item name="android:actionBarWidgetTheme">?attr/actionBarWidgetTheme</item>
 
         <!-- Required for use of support_simple_spinner_dropdown_item.xml -->

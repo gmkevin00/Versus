@@ -17,6 +17,7 @@ public class Room implements Serializable{
     private String room_start;
     private String room_end;
     public int room_star;
+    private String room_boss;
     public void setRoomId(int room_id){
         this.room_id=room_id;
     }
@@ -73,4 +74,11 @@ public class Room implements Serializable{
         return room_end;
     }
     public int getRoomStar(){return  room_star;}
+
+    public void setRoomBoss(String room_boss) {
+        this.room_boss=room_boss;
+    }
+    public String getRoomBoss(){
+        return room_boss;
+    }
 }

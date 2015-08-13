@@ -9,7 +9,8 @@ public class User implements Serializable {
     private int user_id;
     private String user_fbid;
     private String user_name;
-    private ArrayList<String> user_friendList=new ArrayList<String>();
+    private ArrayList<String> user_friendListId=new ArrayList<String>();
+    private ArrayList<String> user_friendListName=new ArrayList<String>();
     public void setId(int user_id){
         this.user_id=user_id;
     }
@@ -19,8 +20,11 @@ public class User implements Serializable {
     public void setUserName(String user_name){
         this.user_name=user_name;
     }
-    public void setUserFriendList(ArrayList<String> user_friendList){
-        this.user_friendList=user_friendList;
+    public void setUserFriendListId(ArrayList<String> user_friendListId){
+        this.user_friendListId=user_friendListId;
+    }
+    public void setUserFriendListName(ArrayList<String> user_friendListName){
+        this.user_friendListName=user_friendListName;
     }
     public int getId(){
         return user_id;
@@ -31,8 +35,11 @@ public class User implements Serializable {
     public String getName(){
         return user_name;
     }
-    public ArrayList<String> getUserFriendList() {
-        return user_friendList;
+    public ArrayList<String> getUser_friendListId() {
+        return user_friendListId;
+    }
+    public ArrayList<String> getUser_friendListName() {
+        return user_friendListName;
     }
 
 }
