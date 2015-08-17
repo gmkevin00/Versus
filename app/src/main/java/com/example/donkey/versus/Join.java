@@ -5,12 +5,16 @@ package com.example.donkey.versus;
  */
 public class Join {
     private String inviter;
+    private String joinRoomId;
     private String joinStart;
     private String joinEnd;
     private String joinName;
     private String joinChallenge;
     public void setInviter(String inviter){
         this.inviter=inviter;
+    }
+    public void setJoinRoomId(String joinRoomId){
+        this.joinRoomId=joinRoomId;
     }
     public void setJoinStart(String joinStart){
         this.joinStart=joinStart;
@@ -26,6 +30,9 @@ public class Join {
     }
     public String getInviter(){
         return  inviter;
+    }
+    public String getJoinRoomId(){
+        return joinRoomId;
     }
     public String getJoinStart(){
         return joinStart;

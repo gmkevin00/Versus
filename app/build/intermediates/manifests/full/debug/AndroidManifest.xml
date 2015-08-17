@@ -74,8 +74,12 @@ picasso
             android:label="@string/title_activity_invite_friend" >
         </activity>
         <activity
-            android:name="com.example.donkey.versus.testActivity"
-            android:label="@string/title_activity_test" >
+            android:name="com.example.donkey.versus.challengeHomeActivity"
+            android:label="@string/title_activity_challenge_home" >
+        </activity>
+        <activity
+            android:name="com.example.donkey.versus.joinActivity"
+            android:label="@string/title_activity_join" >
         </activity>
     </application>
 

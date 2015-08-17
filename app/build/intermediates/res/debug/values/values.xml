@@ -239,7 +239,9 @@
     <string name="messenger_send_button_text">Send</string>
     <!-- From: file:/D:/文件/專題/Versus/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="title_activity_challenge_home">challengeHomeActivity</string>
     <string name="title_activity_invite_friend">inviteFriendActivity</string>
+    <string name="title_activity_join">joinActivity</string>
     <string name="title_activity_new_room">newRoomActivity</string>
     <string name="title_activity_room_home">RoomHomeActivity</string>
     <string name="title_activity_test">testActivity</string>

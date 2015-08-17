@@ -35,7 +35,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     CallbackManager callbackManager;
     private User user;
     private ArrayList<Room> UserRoom=new ArrayList<Room>();
-    private ArrayList<Room> UserJoin=new ArrayList<Room>();
+    private ArrayList<Join> UserJoin=new ArrayList<Join>();
     private ArrayList<Challenge> challengeSet=new ArrayList<Challenge>();
     private AccessToken accessToken;
     @Override
@@ -164,19 +164,14 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     JSONObject jsonobject;
                     for(int i=0;i<jsonarray.getJSONArray(3).length();i++){
                         jsonobject =jsonarray.getJSONArray(3).getJSONObject(i);
-                        Join
-                        r.setRoomId(Integer.parseInt(jsonobject.getString("room_id")));
-                        r.setRoomName(jsonobject.getString("room_name"));
-                        r.setChallengeId(Integer.parseInt(jsonobject.getString("challenge_id")));
-                        r.setChallengeName(jsonobject.getString("challenge_name"));
-                        r.setTypeId(Integer.parseInt(jsonobject.getString("type_id")));
-                        r.setTypeName(jsonobject.getString("type_name"));
-                        r.setRoomCycle(jsonobject.getString("room_cycle"));
-                        r.setRoomStart(jsonobject.getString("room_start"));
-                        r.setRoomEnd(jsonobject.getString("room_end"));
-                        r.setRoomStar(Integer.parseInt(jsonobject.getString("room_star")));
-                        r.setRoomBoss(jsonobject.getString("room_boss"));
-                        UserRoom.add(r);
+                        Join j=new Join();
+                        j.setInviter(jsonobject.getString("invite_inviter"));
+                        j.setJoinRoomId(jsonobject.getString("room_id"));
+                        j.setJoinStart(jsonobject.getString("room_start"));
+                        j.setJoinEnd(jsonobject.getString("room_end"));
+                        j.setJoinName(jsonobject.getString("room_name"));
+                        j.setJoinChallenge(jsonobject.getString("challenge_name"));
+                        UserJoin.add(j);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
