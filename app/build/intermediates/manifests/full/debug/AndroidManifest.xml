@@ -36,6 +36,23 @@ picasso
 2.5.2
         </version>
     </dependency>
+    <dependency>
+        <groupId>
+br.com.liveo
+        </groupId>
+
+        <artifactId>
+navigationdrawer-material
+        </artifactId>
+
+        <version>
+2.3.4
+        </version>
+
+        <type>
+aar
+        </type>
+    </dependency>
 
     <application
         android:allowBackup="true"
@@ -63,7 +80,8 @@ picasso
 
         <activity
             android:name="com.example.donkey.versus.RoomHomeActivity"
-            android:label="@string/title_activity_room_home" >
+            android:label="@string/title_activity_room_home"
+            android:theme="@style/nLiveoDrawer" >
         </activity>
         <activity
             android:name="com.example.donkey.versus.newRoomActivity"

@@ -29,7 +29,6 @@ import java.util.ArrayList;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener{
-    private View testButton;
 
     LoginButton loginButton;
     CallbackManager callbackManager;
@@ -99,8 +98,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 });
             Context context=getBaseContext();
 
-        testButton=(View)findViewById(R.id.button00);
-        testButton.setOnClickListener(this);
 
     }
     @Override

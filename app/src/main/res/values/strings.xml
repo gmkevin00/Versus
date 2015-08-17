@@ -12,18 +12,7 @@
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
 
-    <string-array name="drawer_menu">
-        <item>Apple</item>
-        <item>Book</item>
-        <item>Cat</item>
-        <item>Dog</item>
-        <item>Eagle</item>
-        <item>Food</item>
-        <item>God</item>
-        <item>House</item>
-        <item>Iron</item>
-        <item>Jingle</item>
-    </string-array>
+
     <string name="title_activity_challenge_home">challengeHomeActivity</string>
     <string name="title_activity_join">joinActivity</string>
 

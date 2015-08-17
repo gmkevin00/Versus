@@ -2,6 +2,7 @@ package com.example.donkey.versus;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,8 +17,13 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import br.liveo.Model.HelpLiveo;
+import br.liveo.interfaces.OnItemClickListener;
 
-public class RoomHomeActivity extends ActionBarActivity implements View.OnClickListener,AdapterView.OnItemClickListener {
+
+
+
+public class RoomHomeActivity  extends ActionBarActivity implements View.OnClickListener,AdapterView.OnItemClickListener,OnItemClickListener {
     private ArrayList<Room> RoomUser;
     private User user;
     private ArrayList<Challenge> challengeSet;
@@ -25,8 +31,10 @@ public class RoomHomeActivity extends ActionBarActivity implements View.OnClickL
     private Button addRoomButton;
     private RoomListAdapter adapter;
 
+    private HelpLiveo mHelpLiveo;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_home);
         Intent intent=this.getIntent();
@@ -40,7 +48,11 @@ public class RoomHomeActivity extends ActionBarActivity implements View.OnClickL
         addRoomButton=(Button)findViewById(R.id.addRoomButton);
         addRoomButton.setOnClickListener(this);
 
+        mHelpLiveo = new HelpLiveo();
+
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -114,4 +126,12 @@ public class RoomHomeActivity extends ActionBarActivity implements View.OnClickL
                 int requestCode = 14;
                 startActivityForResult(intent, requestCode);
             }
-        }
+
+    public void onItemClick(int i) {
+        FragmentManager mFragmentManager = getSupportFragmentManager();
+
+    }
+
+
+
+}

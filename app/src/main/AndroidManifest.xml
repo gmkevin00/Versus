@@ -30,7 +30,12 @@ picasso
 2.5.2
         </version>
     </dependency>
-
+    <dependency>
+        <groupId>br.com.liveo</groupId>
+        <artifactId>navigationdrawer-material</artifactId>
+        <version>2.3.4</version>
+        <type>aar</type>
+    </dependency>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -57,7 +62,8 @@ picasso
 
         <activity
             android:name=".RoomHomeActivity"
-            android:label="@string/title_activity_room_home" >
+            android:label="@string/title_activity_room_home"
+            android:theme="@style/nLiveoDrawer">
         </activity>
         <activity
             android:name=".newRoomActivity"
@@ -75,6 +81,8 @@ picasso
             android:name=".joinActivity"
             android:label="@string/title_activity_join" >
         </activity>
+
+
     </application>
 
 </manifest>

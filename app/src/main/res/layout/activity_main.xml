@@ -19,12 +19,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="58dp">
 
-        <com.gc.materialdesign.views.ButtonRectangle
-            android:id="@+id/button00"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#1E88E5"
-            android:text="Button" />
+        
 
     </GridLayout>
 
