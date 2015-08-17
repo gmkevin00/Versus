@@ -35,6 +35,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     CallbackManager callbackManager;
     private User user;
     private ArrayList<Room> UserRoom=new ArrayList<Room>();
+    private ArrayList<Room> UserJoin=new ArrayList<Room>();
     private ArrayList<Challenge> challengeSet=new ArrayList<Challenge>();
     private AccessToken accessToken;
     @Override
@@ -127,9 +128,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     }
     @Override
     public void onClick(View v) {
-        Intent intent=new Intent();
-        intent.setClass(MainActivity.this,testActivity.class);
-        startActivity(intent);
+
     }
     public void userLoginDB(){
         phpConnect p=new phpConnect(this,"讀取資料中,請稍後...");
@@ -156,6 +155,28 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                             r.setRoomStar(Integer.parseInt(jsonobject.getString("room_star")));
                             r.setRoomBoss(jsonobject.getString("room_boss"));
                             UserRoom.add(r);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                try {
+                    JSONObject jsonobject;
+                    for(int i=0;i<jsonarray.getJSONArray(3).length();i++){
+                        jsonobject =jsonarray.getJSONArray(3).getJSONObject(i);
+                        Join
+                        r.setRoomId(Integer.parseInt(jsonobject.getString("room_id")));
+                        r.setRoomName(jsonobject.getString("room_name"));
+                        r.setChallengeId(Integer.parseInt(jsonobject.getString("challenge_id")));
+                        r.setChallengeName(jsonobject.getString("challenge_name"));
+                        r.setTypeId(Integer.parseInt(jsonobject.getString("type_id")));
+                        r.setTypeName(jsonobject.getString("type_name"));
+                        r.setRoomCycle(jsonobject.getString("room_cycle"));
+                        r.setRoomStart(jsonobject.getString("room_start"));
+                        r.setRoomEnd(jsonobject.getString("room_end"));
+                        r.setRoomStar(Integer.parseInt(jsonobject.getString("room_star")));
+                        r.setRoomBoss(jsonobject.getString("room_boss"));
+                        UserRoom.add(r);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

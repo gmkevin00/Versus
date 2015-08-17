@@ -24,5 +24,7 @@
         <item>Iron</item>
         <item>Jingle</item>
     </string-array>
+    <string name="title_activity_challenge_home">challengeHomeActivity</string>
+    <string name="title_activity_join">joinActivity</string>
 
 </resources>

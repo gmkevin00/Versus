@@ -6,13 +6,18 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
 
-public class RoomHomeActivity extends ActionBarActivity implements View.OnClickListener {
+public class RoomHomeActivity extends ActionBarActivity implements View.OnClickListener,AdapterView.OnItemClickListener {
     private ArrayList<Room> RoomUser;
     private User user;
     private ArrayList<Challenge> challengeSet;
@@ -78,4 +83,35 @@ public class RoomHomeActivity extends ActionBarActivity implements View.OnClickL
 
         adapter.updateResults(RoomUser);
     }
-}
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Room r=(Room)adapter.getItem(position);
+
+        phpConnect p=new phpConnect(this,"讀取資料中,請稍後...");
+
+        p.setUrl(String.format("http://140.115.80.235/~group15/challenge.php"));
+        p.addSendData("room_id",""+r.getRoomId());
+        p.execute(new GetUserCallback() {
+            @Override
+            public void done(JSONArray jsonarray) {
+                try {
+                    JSONObject jsonobject;
+                    for (int i = 0; i < jsonarray.getJSONArray(0).length(); i++) {
+
+
+                    }
+                } catch (JSONException e) {
+                     e.printStackTrace();
+                }
+            }
+        });
+                Intent intent = new Intent();
+                intent.setClass(RoomHomeActivity.this, challengeHomeActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("User", user);
+                intent.putExtras(bundle);
+                int requestCode = 14;
+                startActivityForResult(intent, requestCode);
+            }
+        }
