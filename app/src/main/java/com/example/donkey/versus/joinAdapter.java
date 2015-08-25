@@ -41,7 +41,7 @@ public class joinAdapter extends RecyclerView.Adapter<joinAdapter.ViewHolder> {
         holder.inviterName.setText(UserJoin.get(position).getInviterName());
         holder.joinRoomName.setText(UserJoin.get(position).getJoinName());
         holder.joinChallenge.setText(UserJoin.get(position).getJoinChallenge());
-        holder.joinStart.setText(UserJoin.get(position).getJoinStart());
+       holder.joinStart.setText(UserJoin.get(position).getJoinStart());
         holder.joinEnd.setText(UserJoin.get(position).getJoinEnd());
 
     }

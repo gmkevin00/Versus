@@ -11,8 +11,6 @@ import android.view.MenuItem;
 
 import java.util.ArrayList;
 
-import jp.wasabeef.recyclerview.animators.SlideInLeftAnimator;
-
 
 public class joinActivity extends ActionBarActivity {
     private User user;
@@ -35,7 +33,7 @@ public class joinActivity extends ActionBarActivity {
         Log.d("DebugLog",""+UserJoin.size());
 
         joinList = (RecyclerView)findViewById(R.id.joinList);
-        joinList.setItemAnimator(new SlideInLeftAnimator());
+        //joinList.setItemAnimator(new SlideInLeftAnimator());
 
         mLayoutManager = new LinearLayoutManager(this);
         joinList.setLayoutManager(mLayoutManager);
