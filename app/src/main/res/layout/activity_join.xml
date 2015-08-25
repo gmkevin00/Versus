@@ -7,6 +7,13 @@
     tools:context="com.example.donkey.versus.joinActivity">
 
     <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/joinList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 
 </RelativeLayout>

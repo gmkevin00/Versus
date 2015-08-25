@@ -7,7 +7,6 @@ package com.example.donkey.versus;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -108,7 +107,6 @@ public class phpConnect {
                 while ((line = reader.readLine()) != null) {
                     sb.append(line + "\n");
                 }
-                Log.d("DebugLog",sb.toString());
                 reader.close();
                 try {
                     jsonarray=new JSONArray(sb.toString());

@@ -62,8 +62,7 @@ picasso
 
         <activity
             android:name=".RoomHomeActivity"
-            android:label="@string/title_activity_room_home"
-            android:theme="@style/nLiveoDrawer">
+            android:label="@string/title_activity_room_home">
         </activity>
         <activity
             android:name=".newRoomActivity"

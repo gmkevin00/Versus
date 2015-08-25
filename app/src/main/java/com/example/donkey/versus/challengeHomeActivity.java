@@ -1,17 +1,30 @@
 package com.example.donkey.versus;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 
 public class challengeHomeActivity extends ActionBarActivity {
+    private Room roomProfile;
+    private User user;
+    private ArrayList<Competitor> competitors=new ArrayList<Competitor>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_challenge_home);
+
+        Intent intent=this.getIntent();
+        Bundle bundle=intent.getExtras();
+        this.roomProfile=(Room)bundle.getSerializable("Room");
+        this.user=(User)bundle.getSerializable("User");
+        this.competitors=(ArrayList)bundle.getSerializable("Competitor");
     }
 
 

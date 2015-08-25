@@ -68,7 +68,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                                         try {
                                             ArrayList<String> friendlistId = new ArrayList<String>();
                                             ArrayList<String> friendlistName = new ArrayList<String>();
-                                            for (int i = 0; i < jsonFriend.length() - 1; i++) {
+                                            for (int i = 0; i < jsonFriend.getJSONArray("data").length() ; i++) {
                                                 friendlistId.add(jsonFriend.getJSONArray("data").getJSONObject(i).getString("id"));
                                                 friendlistName.add(jsonFriend.getJSONArray("data").getJSONObject(i).getString("name"));
                                             }
@@ -130,7 +130,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     public void userLoginDB(){
         phpConnect p=new phpConnect(this,"讀取資料中,請稍後...");
 
-        p.setUrl(String.format("http://140.115.80.235/~group15/user.php?type=loginuser&uid=%s&name=%s",user.getFbid(),user.getName()));
+        p.setUrl(String.format("http://140.115.80.235/~group15/user.php?type=loginuser"));
+        p.addSendData("uid",user.getFbid());
+        p.addSendData("name",user.getName());
         p.execute(new GetUserCallback() {
             @Override
             public void done(JSONArray jsonarray) {
@@ -162,7 +164,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     for(int i=0;i<jsonarray.getJSONArray(3).length();i++){
                         jsonobject =jsonarray.getJSONArray(3).getJSONObject(i);
                         Join j=new Join();
-                        j.setInviter(jsonobject.getString("invite_inviter"));
+                        j.setInviterId(jsonobject.getString("invite_inviter"));
+                        j.setInviterId(jsonobject.getString("user_name"));
                         j.setJoinRoomId(jsonobject.getString("room_id"));
                         j.setJoinStart(jsonobject.getString("room_start"));
                         j.setJoinEnd(jsonobject.getString("room_end"));
@@ -197,6 +200,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 intent.setClass(MainActivity.this,RoomHomeActivity.class);
                 Bundle bundle=new Bundle();
                 bundle.putSerializable("Room",UserRoom);
+                bundle.putSerializable("Join",UserJoin);
                 bundle.putSerializable("User",user);
                 bundle.putSerializable("Challenge",challengeSet);
                 intent.putExtras(bundle);

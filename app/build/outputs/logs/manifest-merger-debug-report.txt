@@ -30,14 +30,21 @@ ADDED from AndroidManifest.xml:39:5
 MERGED from br.com.liveo:navigationdrawer-material:2.3.4:27:5
 MERGED from com.android.support:design:22.2.0:22:5
 MERGED from com.android.support:appcompat-v7:22.2.0:22:5
-MERGED from com.android.support:support-v4:22.2.0:22:5
-MERGED from com.android.support:support-v4:22.2.0:22:5
+MERGED from com.android.support:support-v4:23.0.0:22:5
+MERGED from com.android.support:support-v4:23.0.0:22:5
 MERGED from com.android.support:appcompat-v7:22.2.0:22:5
-MERGED from com.android.support:support-v4:22.2.0:22:5
+MERGED from com.android.support:support-v4:23.0.0:22:5
 MERGED from com.facebook.android:facebook-android-sdk:4.3.0:28:5
-MERGED from com.android.support:support-v4:22.2.0:22:5
+MERGED from com.android.support:support-v4:23.0.0:22:5
 MERGED from com.android.support:appcompat-v7:22.2.0:22:5
-MERGED from com.android.support:support-v4:22.2.0:22:5
+MERGED from com.android.support:support-v4:23.0.0:22:5
+MERGED from com.android.support:support-v4:23.0.0:22:5
+MERGED from com.android.support:cardview-v7:23.0.0:22:5
+MERGED from com.github.dexafree:materiallist:3.0.0:11:5
+MERGED from com.android.support:appcompat-v7:22.2.0:22:5
+MERGED from com.android.support:support-v4:23.0.0:22:5
+MERGED from com.android.support:cardview-v7:23.0.0:22:5
+MERGED from com.android.support:support-v4:23.0.0:22:5
 	android:label
 		ADDED from AndroidManifest.xml:42:9
 	android:allowBackup
@@ -82,47 +89,55 @@ activity#com.example.donkey.versus.RoomHomeActivity
 ADDED from AndroidManifest.xml:63:9
 	android:label
 		ADDED from AndroidManifest.xml:65:13
-	android:theme
-		ADDED from AndroidManifest.xml:66:13
 	android:name
 		ADDED from AndroidManifest.xml:64:13
 activity#com.example.donkey.versus.newRoomActivity
-ADDED from AndroidManifest.xml:68:9
+ADDED from AndroidManifest.xml:67:9
 	android:label
-		ADDED from AndroidManifest.xml:70:13
-	android:name
 		ADDED from AndroidManifest.xml:69:13
+	android:name
+		ADDED from AndroidManifest.xml:68:13
 activity#com.example.donkey.versus.inviteFriendActivity
-ADDED from AndroidManifest.xml:72:9
+ADDED from AndroidManifest.xml:71:9
 	android:label
-		ADDED from AndroidManifest.xml:74:13
-	android:name
 		ADDED from AndroidManifest.xml:73:13
+	android:name
+		ADDED from AndroidManifest.xml:72:13
 activity#com.example.donkey.versus.challengeHomeActivity
-ADDED from AndroidManifest.xml:76:9
+ADDED from AndroidManifest.xml:75:9
 	android:label
-		ADDED from AndroidManifest.xml:78:13
-	android:name
 		ADDED from AndroidManifest.xml:77:13
-activity#com.example.donkey.versus.joinActivity
-ADDED from AndroidManifest.xml:80:9
-	android:label
-		ADDED from AndroidManifest.xml:82:13
 	android:name
+		ADDED from AndroidManifest.xml:76:13
+activity#com.example.donkey.versus.joinActivity
+ADDED from AndroidManifest.xml:79:9
+	android:label
 		ADDED from AndroidManifest.xml:81:13
+	android:name
+		ADDED from AndroidManifest.xml:80:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from br.com.liveo:navigationdrawer-material:2.3.4:23:5
 MERGED from com.android.support:design:22.2.0:20:5
 MERGED from com.android.support:appcompat-v7:22.2.0:20:5
-MERGED from com.android.support:support-v4:22.2.0:20:5
-MERGED from com.android.support:support-v4:22.2.0:20:5
+MERGED from com.android.support:support-v4:23.0.0:20:5
+MERGED from com.android.support:support-v4:23.0.0:20:5
 MERGED from com.android.support:appcompat-v7:22.2.0:20:5
-MERGED from com.android.support:support-v4:22.2.0:20:5
+MERGED from com.android.support:support-v4:23.0.0:20:5
 MERGED from com.facebook.android:facebook-android-sdk:4.3.0:24:5
-MERGED from com.android.support:support-v4:22.2.0:20:5
+MERGED from com.android.support:support-v4:23.0.0:20:5
 MERGED from com.android.support:appcompat-v7:22.2.0:20:5
-MERGED from com.android.support:support-v4:22.2.0:20:5
+MERGED from com.android.support:support-v4:23.0.0:20:5
+MERGED from jp.wasabeef:recyclerview-animators:1.2.2:8:5
+MERGED from com.android.support:recyclerview-v7:23.0.0:20:5
+MERGED from com.android.support:support-v4:23.0.0:20:5
+MERGED from com.android.support:cardview-v7:23.0.0:20:5
+MERGED from com.github.dexafree:materiallist:3.0.0:7:5
+MERGED from com.android.support:appcompat-v7:22.2.0:20:5
+MERGED from com.android.support:support-v4:23.0.0:20:5
+MERGED from com.android.support:cardview-v7:23.0.0:20:5
+MERGED from com.android.support:recyclerview-v7:23.0.0:20:5
+MERGED from com.android.support:support-v4:23.0.0:20:5
 	android:targetSdkVersion
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0

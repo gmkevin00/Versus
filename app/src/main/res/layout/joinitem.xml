@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent" >
+
+<LinearLayout
+    android:id="@+id/linearLayout3"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+
+</LinearLayout>
+
+    <com.dexafree.materialList.view.MaterialListView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="284dp"
+        android:layout_height="243dp"
+        card_view:cardCornerRadius="4dp"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_alignParentStart="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/inviterPhoto" />
+        <TextView
+            android:id="@+id/inviterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"  />
+        <TextView
+            android:id="@+id/joinRoomName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:id="@+id/joinChallenge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:id="@+id/joinStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:id="@+id/joinEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+        <Button
+            android:id="@+id/joinAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接受"
+            android:layout_alignParentLeft="true" />
+        <Button
+            android:id="@+id/joinDenied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拒絕"
+            android:layout_alignParentLeft="true" />
+
+
+
+
+
+    </com.dexafree.materialList.view.MaterialListView>
+</RelativeLayout>

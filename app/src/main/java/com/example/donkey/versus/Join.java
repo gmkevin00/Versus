@@ -1,17 +1,23 @@
 package com.example.donkey.versus;
 
+import java.io.Serializable;
+
 /**
  * Created by donkey on 2015/8/17.
  */
-public class Join {
-    private String inviter;
+public class Join implements Serializable {
+    private String inviterId;
+    private String inviterName;
     private String joinRoomId;
     private String joinStart;
     private String joinEnd;
     private String joinName;
     private String joinChallenge;
-    public void setInviter(String inviter){
-        this.inviter=inviter;
+    public void setInviterId(String inviterId){
+        this.inviterId=inviterId;
+    }
+    public void setInviterName(String inviterName){
+        this.inviterName=inviterName;
     }
     public void setJoinRoomId(String joinRoomId){
         this.joinRoomId=joinRoomId;
@@ -28,8 +34,11 @@ public class Join {
     public void setJoinChallenge(String joinChallenge){
         this.joinChallenge=joinChallenge;
     }
-    public String getInviter(){
-        return  inviter;
+    public String getInviterId(){
+        return  inviterId;
+    }
+    public String getInviterName(){
+        return  inviterName;
     }
     public String getJoinRoomId(){
         return joinRoomId;
