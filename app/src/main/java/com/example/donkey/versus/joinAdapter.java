@@ -10,22 +10,27 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONArray;
+
 import java.util.ArrayList;
 
 /**
  * Created by donkey on 2015/8/23.
  */
 public class joinAdapter extends RecyclerView.Adapter<joinAdapter.ViewHolder> {
-    private ArrayList<Join> UserJoin=new ArrayList<>();
+     static ArrayList<Join> UserJoin=new ArrayList<>();
+    private ViewGroup parent;
+    private User user;
 
-
-    public joinAdapter(ArrayList<Join> UserJoin)
+    public joinAdapter(User user,ArrayList<Join> UserJoin)
     {
+        this.user=user;
         this.UserJoin=UserJoin;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        this.parent=parent;
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.joinitem, parent, false);
         // set the view's size, margins, paddings and layout parameters
@@ -38,7 +43,7 @@ public class joinAdapter extends RecyclerView.Adapter<joinAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Picasso.with(holder.inviterPhoto.getContext()).load(String.format("https://graph.facebook.com/%s/picture",UserJoin.get(position).getInviterId())).into(holder.inviterPhoto);
-        holder.inviterName.setText(UserJoin.get(position).getInviterName());
+        holder.inviterName.setText(UserJoin.get(position).getInviterName()+" 邀請了你");
         holder.joinRoomName.setText(UserJoin.get(position).getJoinName());
         holder.joinChallenge.setText(UserJoin.get(position).getJoinChallenge());
        holder.joinStart.setText(UserJoin.get(position).getJoinStart());
@@ -51,7 +56,7 @@ public class joinAdapter extends RecyclerView.Adapter<joinAdapter.ViewHolder> {
         return UserJoin.size();
     }
 
-     static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public  class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView inviterPhoto;
         TextView inviterName;
         TextView joinRoomName;
@@ -63,7 +68,7 @@ public class joinAdapter extends RecyclerView.Adapter<joinAdapter.ViewHolder> {
 
         public ViewHolder(View itemLayoutView){
             super(itemLayoutView);
-            itemLayoutView.setOnClickListener(this);
+
             this.inviterPhoto=(ImageView)itemLayoutView.findViewById(R.id.inviterPhoto);
             this.inviterName=(TextView)itemLayoutView.findViewById(R.id.inviterName);
             this.joinRoomName=(TextView)itemLayoutView.findViewById(R.id.joinRoomName);
@@ -72,12 +77,39 @@ public class joinAdapter extends RecyclerView.Adapter<joinAdapter.ViewHolder> {
             this.joinEnd=(TextView)itemLayoutView.findViewById(R.id.joinEnd);
             this.joinAccept=(Button)itemLayoutView.findViewById(R.id.joinAccept);;
             this.joinDenied=(Button)itemLayoutView.findViewById(R.id.joinDenied);;
-
+            this.joinAccept.setOnClickListener(this);
+            this.joinDenied.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
+            int position=getPosition();
+            phpConnect p=new phpConnect(parent.getContext(),"讀取資料中,請稍後...");
+            p.setUrl(String.format("http://140.115.80.235/~group15/join.php"));
+            if(v.getId()==R.id.joinAccept)
+            {
+                p.addSendData("type", "accept");
+            }
+            else if(v.getId()==R.id.joinDenied)
+            {
+                p.addSendData("type", "denied");
+            }
+            p.addSendData("user_id", "" + user.getFbid());
+            p.addSendData("room_id", ""+UserJoin.get(position).getJoinRoomId());
+            p.execute(new GetUserCallback() {
+                @Override
+                public void done(JSONArray jsonarray) {
+                    ;
+                }
+            });
 
+            removeAt(position);
         }
     }
+    public void removeAt(int position) {
+        UserJoin.remove(position);
+        notifyItemRemoved(position);
+    }
+
+
 }

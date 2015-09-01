@@ -119,7 +119,7 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         this.RoomUser=(ArrayList<Room>)data.getExtras().getSerializable("Room");
-
+        this.UserJoin=(ArrayList<Join>)data.getExtras().getSerializable("Invite");
         adapter.updateResults(RoomUser);
     }
 

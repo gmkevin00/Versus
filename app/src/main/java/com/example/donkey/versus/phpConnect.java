@@ -107,6 +107,7 @@ public class phpConnect {
                 while ((line = reader.readLine()) != null) {
                     sb.append(line + "\n");
                 }
+                //Log.d("DebugLog", sb.toString());
                 reader.close();
                 try {
                     jsonarray=new JSONArray(sb.toString());

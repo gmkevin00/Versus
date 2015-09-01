@@ -705,6 +705,7 @@ int id addRoomButton 0x7f0c0088
 int id alertTitle 0x7f0c0054
 int id always 0x7f0c002c
 int id automatic 0x7f0c0042
+int id backButton 0x7f0c0078
 int id beginning 0x7f0c002a
 int id bottom 0x7f0c001b
 int id box_count 0x7f0c003e
@@ -783,7 +784,7 @@ int id joinAccept 0x7f0c00a0
 int id joinChallenge 0x7f0c009d
 int id joinDenied 0x7f0c00a1
 int id joinEnd 0x7f0c009f
-int id joinList 0x7f0c0078
+int id joinList 0x7f0c0077
 int id joinRoomName 0x7f0c009c
 int id joinStart 0x7f0c009e
 int id large 0x7f0c0045
@@ -876,7 +877,6 @@ int id textView4 0x7f0c0083
 int id textView5 0x7f0c0074
 int id textView6 0x7f0c0086
 int id textView7 0x7f0c0094
-int id textView8 0x7f0c0077
 int id time 0x7f0c00ca
 int id title 0x7f0c0050
 int id titleFooter 0x7f0c00b5

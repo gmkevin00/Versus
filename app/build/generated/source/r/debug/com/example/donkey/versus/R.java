@@ -2450,6 +2450,7 @@ containing a value of this type.
         public static final int alertTitle=0x7f0c0054;
         public static final int always=0x7f0c002c;
         public static final int automatic=0x7f0c0042;
+        public static final int backButton=0x7f0c0078;
         public static final int beginning=0x7f0c002a;
         public static final int bottom=0x7f0c001b;
         public static final int box_count=0x7f0c003e;
@@ -2528,7 +2529,7 @@ containing a value of this type.
         public static final int joinChallenge=0x7f0c009d;
         public static final int joinDenied=0x7f0c00a1;
         public static final int joinEnd=0x7f0c009f;
-        public static final int joinList=0x7f0c0078;
+        public static final int joinList=0x7f0c0077;
         public static final int joinRoomName=0x7f0c009c;
         public static final int joinStart=0x7f0c009e;
         public static final int large=0x7f0c0045;
@@ -2621,7 +2622,6 @@ containing a value of this type.
         public static final int textView5=0x7f0c0074;
         public static final int textView6=0x7f0c0086;
         public static final int textView7=0x7f0c0094;
-        public static final int textView8=0x7f0c0077;
         public static final int time=0x7f0c00ca;
         public static final int title=0x7f0c0050;
         public static final int titleFooter=0x7f0c00b5;

@@ -6,6 +6,7 @@ import java.io.Serializable;
  * Created by donkey on 2015/8/17.
  */
 public class Join implements Serializable {
+    private int joinId;
     private String inviterId;
     private String inviterName;
     private String joinRoomId;
@@ -13,6 +14,9 @@ public class Join implements Serializable {
     private String joinEnd;
     private String joinName;
     private String joinChallenge;
+    public void setJoinId(int joinId){
+        this.joinId=joinId;
+    }
     public void setInviterId(String inviterId){
         this.inviterId=inviterId;
     }
@@ -34,6 +38,7 @@ public class Join implements Serializable {
     public void setJoinChallenge(String joinChallenge){
         this.joinChallenge=joinChallenge;
     }
+    public int getJoinId(){return joinId;}
     public String getInviterId(){
         return  inviterId;
     }

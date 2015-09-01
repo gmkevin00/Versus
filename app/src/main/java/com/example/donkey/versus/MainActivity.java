@@ -1,6 +1,5 @@
 package com.example.donkey.versus;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -18,6 +17,7 @@ import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.HttpMethod;
 import com.facebook.Profile;
+import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
@@ -26,12 +26,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
+import java.util.Arrays;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener{
 
     LoginButton loginButton;
     CallbackManager callbackManager;
+
+
     private User user;
     private ArrayList<Room> UserRoom=new ArrayList<Room>();
     private ArrayList<Join> UserJoin=new ArrayList<Join>();
@@ -43,63 +45,67 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         callbackManager = CallbackManager.Factory.create();
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        if(accessToken!=null)
+        {
+            LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile", "user_friends"));
+            LoginManager.getInstance().registerCallback(callbackManager,callback);
+        }
         loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions("user_friends");
-        loginButton.registerCallback(callbackManager,
-                new FacebookCallback<LoginResult>() {
-                    @Override
-                    public void onSuccess(LoginResult loginResult) {
-                        accessToken = loginResult.getAccessToken();
-                        // App code
-                        Profile profile = Profile.getCurrentProfile();
-                        user = new User();
-                        user.setUserFbid(profile.getId());
-                        user.setUserName(profile.getName());
-                        new GraphRequest(
-                                accessToken.getCurrentAccessToken(),
-                                "/me/friends",
-                                null,
-                                HttpMethod.GET,
-                                new GraphRequest.Callback() {
-                                    public void onCompleted(GraphResponse response) {
-                                        //        Log.d("FB","Members: " + response.toString());
-                                        JSONObject jsonFriend = response.getJSONObject();
-                                          //Log.d("DebugLog","Members: " + jsonFriend);
-                                        try {
-                                            ArrayList<String> friendlistId = new ArrayList<String>();
-                                            ArrayList<String> friendlistName = new ArrayList<String>();
-                                            for (int i = 0; i < jsonFriend.getJSONArray("data").length() ; i++) {
-                                                friendlistId.add(jsonFriend.getJSONArray("data").getJSONObject(i).getString("id"));
-                                                friendlistName.add(jsonFriend.getJSONArray("data").getJSONObject(i).getString("name"));
-                                            }
-                                            user.setUserFriendListId(friendlistId);
-                                            user.setUserFriendListName(friendlistName);
-                                            userLoginDB();
-                                        } catch (JSONException e) {
-                                            Log.d("DebugLog", "Freind Get Failed!");
-                                            e.printStackTrace();
-                                        }
-                                    }
-                                }
-                        ).executeAsync();
-                    }
-
-                    @Override
-                    public void onCancel() {
-                        // App code
-                        Log.d("DebugLog", "Facebook Login cancel");
-                    }
-
-                    @Override
-                    public void onError(FacebookException exception) {
-                        // App code
-                        Log.d("Log", "Facebook Login fail");
-                    }
-                });
-            Context context=getBaseContext();
-
-
+        loginButton.registerCallback(callbackManager,callback);
     }
+
+    private FacebookCallback<LoginResult> callback=new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                accessToken = loginResult.getAccessToken();
+                 Profile profile = Profile.getCurrentProfile();
+                user = new User();
+                user.setUserFbid(profile.getId());
+                user.setUserName(profile.getName());
+                new GraphRequest(
+                        accessToken.getCurrentAccessToken(),
+                        "/me/friends",
+                        null,
+                        HttpMethod.GET,
+                        new GraphRequest.Callback() {
+                            public void onCompleted(GraphResponse response) {
+                                //        Log.d("FB","Members: " + response.toString());
+                                JSONObject jsonFriend = response.getJSONObject();
+                                //Log.d("DebugLog","Members: " + jsonFriend);
+                                try {
+                                    ArrayList<String> friendlistId = new ArrayList<String>();
+                                    ArrayList<String> friendlistName = new ArrayList<String>();
+                                    for (int i = 0; i < jsonFriend.getJSONArray("data").length() ; i++) {
+                                        friendlistId.add(jsonFriend.getJSONArray("data").getJSONObject(i).getString("id"));
+                                        friendlistName.add(jsonFriend.getJSONArray("data").getJSONObject(i).getString("name"));
+                                    }
+                                    user.setUserFriendListId(friendlistId);
+                                    user.setUserFriendListName(friendlistName);
+                                    userLoginDB();
+                                } catch (JSONException e) {
+                                    Log.d("DebugLog", "Freind Get Failed!");
+                                    e.printStackTrace();
+                                }
+                            }
+                        }
+                ).executeAsync();
+            }
+
+            @Override
+            public void onCancel() {
+                // App code
+                Log.d("DebugLog", "Facebook Login cancel");
+            }
+
+            @Override
+            public void onError(FacebookException exception) {
+                // App code
+                Log.d("Log", "Facebook Login fail");
+            }
+    };
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -136,7 +142,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         p.execute(new GetUserCallback() {
             @Override
             public void done(JSONArray jsonarray) {
-                //Log.d("DebugLog",jsonarray.toString());
+               // Log.d("DebugLog",jsonarray.toString());
                 try {
                     JSONObject jsonobject;
                     for(int i=0;i<jsonarray.getJSONArray(0).length();i++){
@@ -164,8 +170,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     for(int i=0;i<jsonarray.getJSONArray(3).length();i++){
                         jsonobject =jsonarray.getJSONArray(3).getJSONObject(i);
                         Join j=new Join();
+                        j.setJoinId(Integer.parseInt(jsonobject.getString("invite_id")));
                         j.setInviterId(jsonobject.getString("invite_inviter"));
-                        j.setInviterId(jsonobject.getString("user_name"));
+                        j.setInviterName(jsonobject.getString("user_name"));
                         j.setJoinRoomId(jsonobject.getString("room_id"));
                         j.setJoinStart(jsonobject.getString("room_start"));
                         j.setJoinEnd(jsonobject.getString("room_end"));
