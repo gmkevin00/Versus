@@ -1,10 +1,16 @@
 package com.example.donkey.versus;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+
+import com.ogaclejapan.smarttablayout.SmartTabLayout;
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
 
 import java.util.ArrayList;
 
@@ -14,7 +20,7 @@ public class challengeHomeActivity extends ActionBarActivity {
     private User user;
     private ArrayList<Competitor> competitors=new ArrayList<Competitor>();
 
-
+    Button tb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +31,20 @@ public class challengeHomeActivity extends ActionBarActivity {
         this.roomProfile=(Room)bundle.getSerializable("Room");
         this.user=(User)bundle.getSerializable("User");
         this.competitors=(ArrayList)bundle.getSerializable("Competitor");
+
+        FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
+                getSupportFragmentManager(), FragmentPagerItems.with(this)
+                .add("進度查核", challengeHomeActivityFragment.class)
+                .add("群組聊天", challengeChatActivityFragment.class)
+                .add("朋友進度", challengeFriendListActivityFragment.class)
+                .create());
+
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.setAdapter(adapter);
+
+        SmartTabLayout viewPagerTab = (SmartTabLayout) findViewById(R.id.viewpagertab);
+        viewPagerTab.setViewPager(viewPager);
+
     }
 
 
@@ -48,5 +68,15 @@ public class challengeHomeActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public Bundle getDataFromAvtivity()
+    {
+        Bundle bundle=new Bundle();
+        bundle.putSerializable("User",user);
+        bundle.putSerializable("Competitors",competitors);
+        bundle.putSerializable("Room",roomProfile);
+
+        return bundle;
     }
 }

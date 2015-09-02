@@ -16,7 +16,6 @@ import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.HttpMethod;
-import com.facebook.Profile;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
@@ -60,37 +59,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             @Override
             public void onSuccess(LoginResult loginResult) {
                 accessToken = loginResult.getAccessToken();
-                 Profile profile = Profile.getCurrentProfile();
-                user = new User();
-                user.setUserFbid(profile.getId());
-                user.setUserName(profile.getName());
-                new GraphRequest(
-                        accessToken.getCurrentAccessToken(),
-                        "/me/friends",
-                        null,
-                        HttpMethod.GET,
-                        new GraphRequest.Callback() {
-                            public void onCompleted(GraphResponse response) {
-                                //        Log.d("FB","Members: " + response.toString());
-                                JSONObject jsonFriend = response.getJSONObject();
-                                //Log.d("DebugLog","Members: " + jsonFriend);
-                                try {
-                                    ArrayList<String> friendlistId = new ArrayList<String>();
-                                    ArrayList<String> friendlistName = new ArrayList<String>();
-                                    for (int i = 0; i < jsonFriend.getJSONArray("data").length() ; i++) {
-                                        friendlistId.add(jsonFriend.getJSONArray("data").getJSONObject(i).getString("id"));
-                                        friendlistName.add(jsonFriend.getJSONArray("data").getJSONObject(i).getString("name"));
-                                    }
-                                    user.setUserFriendListId(friendlistId);
-                                    user.setUserFriendListName(friendlistName);
-                                    userLoginDB();
-                                } catch (JSONException e) {
-                                    Log.d("DebugLog", "Freind Get Failed!");
-                                    e.printStackTrace();
-                                }
-                            }
-                        }
-                ).executeAsync();
+                getUserProfile();
+                getUserFriend();
             }
 
             @Override
@@ -215,5 +185,58 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 MainActivity.this.finish();
             }
         });
+    }
+
+    public void getUserFriend()
+    {
+        new GraphRequest(
+                accessToken.getCurrentAccessToken(),
+                "/me/friends",
+                null,
+                HttpMethod.GET,
+                new GraphRequest.Callback() {
+                    public void onCompleted(GraphResponse response) {
+                        Log.d("FB","Members: " + response.toString());
+                        JSONObject jsonFriend = response.getJSONObject();
+                        Log.d("DebugLog","Members: " + jsonFriend);
+                        try {
+                            ArrayList<String> friendlistId = new ArrayList<String>();
+                            ArrayList<String> friendlistName = new ArrayList<String>();
+                            for (int i = 0; i < jsonFriend.getJSONArray("data").length() ; i++) {
+                                friendlistId.add(jsonFriend.getJSONArray("data").getJSONObject(i).getString("id"));
+                                friendlistName.add(jsonFriend.getJSONArray("data").getJSONObject(i).getString("name"));
+                            }
+                            user.setUserFriendListId(friendlistId);
+                            user.setUserFriendListName(friendlistName);
+                            userLoginDB();
+                        } catch (JSONException e) {
+                            Log.d("DebugLog", "Freind Get Failed!");
+                            e.printStackTrace();
+                        }
+                    }
+                }
+        ).executeAsync();
+    }
+    public void getUserProfile()
+    {
+        new GraphRequest(
+                accessToken.getCurrentAccessToken(),
+                "/me/",
+                null,
+                HttpMethod.GET,
+                new GraphRequest.Callback() {
+                    public void onCompleted(GraphResponse response) {
+                        JSONObject jsonProfile = response.getJSONObject();
+                        try {
+                            user = new User();
+                            user.setUserFbid(jsonProfile.getString("id"));
+                            user.setUserName(jsonProfile.getString("last_name")+jsonProfile.getString("first_name"));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                }
+        ).executeAsync();
     }
 }

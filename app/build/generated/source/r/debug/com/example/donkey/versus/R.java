@@ -1559,6 +1559,219 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int statusBarScrim=0x7f01003c;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_clickable=0x7f010133;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int stl_customTabTextLayoutId=0x7f010130;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int stl_customTabTextViewId=0x7f010131;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int stl_defaultTabBackground=0x7f01012a;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_defaultTabTextAllCaps=0x7f01012b;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int stl_defaultTabTextColor=0x7f01012c;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_defaultTabTextHorizontalPadding=0x7f01012e;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_defaultTabTextMinWidth=0x7f01012f;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_defaultTabTextSize=0x7f01012d;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_distributeEvenly=0x7f010132;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_dividerColor=0x7f010127;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int stl_dividerColors=0x7f010128;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_dividerThickness=0x7f010129;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_indicatorAlwaysInCenter=0x7f01011a;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_indicatorColor=0x7f01011f;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int stl_indicatorColors=0x7f010120;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_indicatorCornerRadius=0x7f010122;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>bottom</code></td><td>0</td><td></td></tr>
+<tr><td><code>top</code></td><td>1</td><td></td></tr>
+<tr><td><code>center</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int stl_indicatorGravity=0x7f01011e;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_indicatorInFront=0x7f01011c;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>smart</code></td><td>0</td><td></td></tr>
+<tr><td><code>linear</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int stl_indicatorInterpolation=0x7f01011d;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_indicatorThickness=0x7f010121;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_indicatorWithoutPadding=0x7f01011b;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_overlineColor=0x7f010123;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_overlineThickness=0x7f010124;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_underlineColor=0x7f010125;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stl_underlineThickness=0x7f010126;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -2428,219 +2641,227 @@ containing a value of this type.
         public static final int snackbar_background=0x7f02005f;
     }
     public static final class id {
-        public static final int RoomListView=0x7f0c0089;
-        public static final int action0=0x7f0c00c4;
-        public static final int action_bar=0x7f0c0064;
+        public static final int RoomListView=0x7f0c008c;
+        public static final int action0=0x7f0c00c8;
+        public static final int action_bar=0x7f0c0066;
         public static final int action_bar_activity_content=0x7f0c0000;
-        public static final int action_bar_container=0x7f0c0063;
-        public static final int action_bar_root=0x7f0c005f;
+        public static final int action_bar_container=0x7f0c0065;
+        public static final int action_bar_root=0x7f0c0061;
         public static final int action_bar_spinner=0x7f0c0001;
-        public static final int action_bar_subtitle=0x7f0c0048;
-        public static final int action_bar_title=0x7f0c0047;
-        public static final int action_context_bar=0x7f0c0065;
-        public static final int action_divider=0x7f0c00c8;
+        public static final int action_bar_subtitle=0x7f0c004a;
+        public static final int action_bar_title=0x7f0c0049;
+        public static final int action_context_bar=0x7f0c0067;
+        public static final int action_divider=0x7f0c00cc;
         public static final int action_menu_divider=0x7f0c0002;
         public static final int action_menu_presenter=0x7f0c0003;
-        public static final int action_mode_bar=0x7f0c0061;
-        public static final int action_mode_bar_stub=0x7f0c0060;
-        public static final int action_mode_close_button=0x7f0c0049;
-        public static final int action_settings=0x7f0c00d5;
-        public static final int activity_chooser_view_content=0x7f0c004a;
-        public static final int addRoomButton=0x7f0c0088;
-        public static final int alertTitle=0x7f0c0054;
+        public static final int action_mode_bar=0x7f0c0063;
+        public static final int action_mode_bar_stub=0x7f0c0062;
+        public static final int action_mode_close_button=0x7f0c004b;
+        public static final int action_settings=0x7f0c00dd;
+        public static final int activity_chooser_view_content=0x7f0c004c;
+        public static final int addRoomButton=0x7f0c008b;
+        public static final int alertTitle=0x7f0c0056;
         public static final int always=0x7f0c002c;
         public static final int automatic=0x7f0c0042;
-        public static final int backButton=0x7f0c0078;
+        public static final int backButton=0x7f0c007a;
         public static final int beginning=0x7f0c002a;
         public static final int bottom=0x7f0c001b;
         public static final int box_count=0x7f0c003e;
         public static final int button=0x7f0c003f;
-        public static final int buttonPanel=0x7f0c005a;
-        public static final int cancel_action=0x7f0c00c5;
-        public static final int cardDivider=0x7f0c00a7;
-        public static final int cardView=0x7f0c00a4;
+        public static final int buttonPanel=0x7f0c005c;
+        public static final int cancel_action=0x7f0c00c9;
+        public static final int cardDivider=0x7f0c00ab;
+        public static final int cardView=0x7f0c00a8;
         public static final int center=0x7f0c001c;
         public static final int center_horizontal=0x7f0c001d;
         public static final int center_vertical=0x7f0c001e;
-        public static final int checkbox=0x7f0c005c;
-        public static final int chronometer=0x7f0c00cb;
+        public static final int checkbox=0x7f0c005e;
+        public static final int chronometer=0x7f0c00cf;
         public static final int clip_horizontal=0x7f0c001f;
         public static final int clip_vertical=0x7f0c0020;
         public static final int collapseActionView=0x7f0c002d;
-        public static final int com_facebook_body_frame=0x7f0c008f;
-        public static final int com_facebook_button_xout=0x7f0c0091;
-        public static final int com_facebook_fragment_container=0x7f0c008d;
-        public static final int com_facebook_login_activity_progress_bar=0x7f0c008e;
-        public static final int com_facebook_tooltip_bubble_view_bottom_pointer=0x7f0c0093;
-        public static final int com_facebook_tooltip_bubble_view_text_body=0x7f0c0092;
-        public static final int com_facebook_tooltip_bubble_view_top_pointer=0x7f0c0090;
-        public static final int container=0x7f0c00af;
-        public static final int containerList=0x7f0c00b0;
-        public static final int contentPanel=0x7f0c0055;
-        public static final int content_frame=0x7f0c008b;
-        public static final int counter=0x7f0c00c0;
-        public static final int custom=0x7f0c0059;
-        public static final int customPanel=0x7f0c0058;
-        public static final int cycleSpinner=0x7f0c0084;
-        public static final int decor_content_parent=0x7f0c0062;
-        public static final int default_activity_button=0x7f0c004d;
-        public static final int descriptionTextView=0x7f0c00a6;
+        public static final int com_facebook_body_frame=0x7f0c0092;
+        public static final int com_facebook_button_xout=0x7f0c0094;
+        public static final int com_facebook_fragment_container=0x7f0c0090;
+        public static final int com_facebook_login_activity_progress_bar=0x7f0c0091;
+        public static final int com_facebook_tooltip_bubble_view_bottom_pointer=0x7f0c0096;
+        public static final int com_facebook_tooltip_bubble_view_text_body=0x7f0c0095;
+        public static final int com_facebook_tooltip_bubble_view_top_pointer=0x7f0c0093;
+        public static final int container=0x7f0c00b3;
+        public static final int containerList=0x7f0c00b4;
+        public static final int contentPanel=0x7f0c0057;
+        public static final int content_frame=0x7f0c008e;
+        public static final int counter=0x7f0c00c4;
+        public static final int custom=0x7f0c005b;
+        public static final int customPanel=0x7f0c005a;
+        public static final int cycleSpinner=0x7f0c0087;
+        public static final int decor_content_parent=0x7f0c0064;
+        public static final int default_activity_button=0x7f0c004f;
+        public static final int descriptionTextView=0x7f0c00aa;
         public static final int dialog=0x7f0c0031;
         public static final int disableHome=0x7f0c000e;
         public static final int display_always=0x7f0c0043;
-        public static final int drawerLayout=0x7f0c00c2;
-        public static final int drawer_layout=0x7f0c008a;
+        public static final int drawerLayout=0x7f0c00c6;
+        public static final int drawer_layout=0x7f0c008d;
         public static final int dropdown=0x7f0c0032;
-        public static final int edit_query=0x7f0c0066;
+        public static final int edit_query=0x7f0c0068;
         public static final int end=0x7f0c0021;
-        public static final int end_padder=0x7f0c00d0;
+        public static final int end_padder=0x7f0c00d4;
         public static final int enterAlways=0x7f0c0015;
         public static final int enterAlwaysCollapsed=0x7f0c0016;
-        public static final int entryIinvitePage=0x7f0c00d6;
+        public static final int entryIinvitePage=0x7f0c00de;
         public static final int exitUntilCollapsed=0x7f0c0017;
-        public static final int expand_activities_button=0x7f0c004b;
-        public static final int expanded_menu=0x7f0c005b;
+        public static final int expand_activities_button=0x7f0c004d;
+        public static final int expanded_menu=0x7f0c005d;
         public static final int fill=0x7f0c0022;
         public static final int fill_horizontal=0x7f0c0023;
         public static final int fill_vertical=0x7f0c0024;
         public static final int fixed=0x7f0c0033;
-        public static final int footerDrawer=0x7f0c00b3;
-        public static final int fragment=0x7f0c0073;
-        public static final int getRandomChallengeButton=0x7f0c0080;
+        public static final int footerDrawer=0x7f0c00b7;
+        public static final int getRandomChallengeButton=0x7f0c0083;
         public static final int home=0x7f0c0004;
         public static final int homeAsUp=0x7f0c000f;
-        public static final int icon=0x7f0c004f;
-        public static final int iconFooter=0x7f0c00b4;
+        public static final int icon=0x7f0c0051;
+        public static final int iconFooter=0x7f0c00b8;
         public static final int ifRoom=0x7f0c002e;
-        public static final int image=0x7f0c004c;
-        public static final int imageView=0x7f0c00aa;
-        public static final int info=0x7f0c00cf;
+        public static final int image=0x7f0c004e;
+        public static final int imageView=0x7f0c00ae;
+        public static final int info=0x7f0c00d3;
         public static final int inline=0x7f0c0041;
-        public static final int inviteButton=0x7f0c0087;
-        public static final int inviteFreindConfirmButton=0x7f0c0076;
-        public static final int inviteFriendId=0x7f0c0098;
-        public static final int inviteFriendList=0x7f0c0075;
-        public static final int inviteFriendName=0x7f0c0099;
-        public static final int inviteFriendPhoto=0x7f0c0097;
-        public static final int inviterName=0x7f0c009b;
-        public static final int inviterPhoto=0x7f0c009a;
+        public static final int inviteButton=0x7f0c008a;
+        public static final int inviteFreindConfirmButton=0x7f0c0079;
+        public static final int inviteFriendId=0x7f0c009c;
+        public static final int inviteFriendList=0x7f0c0078;
+        public static final int inviteFriendName=0x7f0c009d;
+        public static final int inviteFriendPhoto=0x7f0c009b;
+        public static final int inviterName=0x7f0c009f;
+        public static final int inviterPhoto=0x7f0c009e;
         public static final int item_touch_helper_previous_elevation=0x7f0c0005;
-        public static final int joinAccept=0x7f0c00a0;
-        public static final int joinChallenge=0x7f0c009d;
-        public static final int joinDenied=0x7f0c00a1;
-        public static final int joinEnd=0x7f0c009f;
-        public static final int joinList=0x7f0c0077;
-        public static final int joinRoomName=0x7f0c009c;
-        public static final int joinStart=0x7f0c009e;
+        public static final int joinAccept=0x7f0c00a4;
+        public static final int joinChallenge=0x7f0c00a1;
+        public static final int joinDenied=0x7f0c00a5;
+        public static final int joinEnd=0x7f0c00a3;
+        public static final int joinList=0x7f0c007b;
+        public static final int joinRoomName=0x7f0c00a0;
+        public static final int joinStart=0x7f0c00a2;
         public static final int large=0x7f0c0045;
-        public static final int layoutDados=0x7f0c00bf;
-        public static final int layoutFooter=0x7f0c00b2;
-        public static final int layoutSeparator=0x7f0c00bd;
+        public static final int layoutDados=0x7f0c00c3;
+        public static final int layoutFooter=0x7f0c00b6;
+        public static final int layoutSeparator=0x7f0c00c1;
         public static final int left=0x7f0c0025;
-        public static final int left_drawer=0x7f0c008c;
-        public static final int left_text_button=0x7f0c00a8;
-        public static final int line1=0x7f0c00c9;
-        public static final int line3=0x7f0c00cd;
-        public static final int linearLayout2=0x7f0c00d1;
-        public static final int linearLayout3=0x7f0c0096;
-        public static final int list=0x7f0c00b1;
+        public static final int left_drawer=0x7f0c008f;
+        public static final int left_text_button=0x7f0c00ac;
+        public static final int line1=0x7f0c00cd;
+        public static final int line3=0x7f0c00d1;
+        public static final int linear=0x7f0c0047;
+        public static final int linearLayout2=0x7f0c00d9;
+        public static final int linearLayout3=0x7f0c009a;
+        public static final int linearLayout4=0x7f0c00d5;
+        public static final int list=0x7f0c00b5;
         public static final int listMode=0x7f0c000b;
-        public static final int listView=0x7f0c00ab;
-        public static final int list_item=0x7f0c004e;
-        public static final int login_button=0x7f0c0079;
-        public static final int media_actions=0x7f0c00c7;
-        public static final int messenger_send_button=0x7f0c00ae;
+        public static final int listView=0x7f0c00af;
+        public static final int list_item=0x7f0c0050;
+        public static final int login_button=0x7f0c007c;
+        public static final int media_actions=0x7f0c00cb;
+        public static final int messenger_send_button=0x7f0c00b2;
         public static final int middle=0x7f0c002b;
         public static final int mini=0x7f0c0029;
         public static final int multiply=0x7f0c0036;
-        public static final int name=0x7f0c00d3;
+        public static final int name=0x7f0c00db;
         public static final int never=0x7f0c002f;
         public static final int never_display=0x7f0c0044;
-        public static final int newChallengeName=0x7f0c007f;
-        public static final int newChallengeType=0x7f0c007d;
-        public static final int newRoomEnd=0x7f0c0085;
-        public static final int newRoomName=0x7f0c007b;
-        public static final int newRoomStart=0x7f0c0081;
+        public static final int newChallengeName=0x7f0c0082;
+        public static final int newChallengeType=0x7f0c0080;
+        public static final int newRoomEnd=0x7f0c0088;
+        public static final int newRoomName=0x7f0c007e;
+        public static final int newRoomStart=0x7f0c0084;
         public static final int none=0x7f0c0010;
         public static final int normal=0x7f0c000c;
-        public static final int ok_button=0x7f0c00ad;
+        public static final int ok_button=0x7f0c00b1;
         public static final int open_graph=0x7f0c003b;
         public static final int page=0x7f0c003c;
         public static final int parallax=0x7f0c0019;
-        public static final int parentPanel=0x7f0c0051;
-        public static final int photo=0x7f0c00d2;
+        public static final int parentPanel=0x7f0c0053;
+        public static final int photo=0x7f0c00da;
         public static final int pin=0x7f0c001a;
+        public static final int processFriendList=0x7f0c0097;
+        public static final int processFriendName=0x7f0c00d7;
+        public static final int processFriendPhoto=0x7f0c00d6;
+        public static final int processFriendStep=0x7f0c00d8;
         public static final int progress_circular=0x7f0c0006;
         public static final int progress_horizontal=0x7f0c0007;
-        public static final int radio=0x7f0c005e;
-        public static final int radioButton=0x7f0c0095;
-        public static final int relativeDrawer=0x7f0c00c3;
+        public static final int radio=0x7f0c0060;
+        public static final int radioButton=0x7f0c0098;
+        public static final int relativeDrawer=0x7f0c00c7;
         public static final int right=0x7f0c0026;
-        public static final int right_text_button=0x7f0c00a9;
-        public static final int roomNameTxt=0x7f0c007a;
+        public static final int right_text_button=0x7f0c00ad;
+        public static final int roomNameTxt=0x7f0c007d;
         public static final int screen=0x7f0c0037;
         public static final int scroll=0x7f0c0018;
-        public static final int scrollView=0x7f0c0056;
+        public static final int scrollView=0x7f0c0058;
         public static final int scrollable=0x7f0c0034;
-        public static final int search_badge=0x7f0c0068;
-        public static final int search_bar=0x7f0c0067;
-        public static final int search_button=0x7f0c0069;
-        public static final int search_close_btn=0x7f0c006e;
-        public static final int search_edit_frame=0x7f0c006a;
-        public static final int search_go_btn=0x7f0c0070;
-        public static final int search_mag_icon=0x7f0c006b;
-        public static final int search_plate=0x7f0c006c;
-        public static final int search_src_text=0x7f0c006d;
-        public static final int search_voice_btn=0x7f0c0071;
-        public static final int select_dialog_listview=0x7f0c0072;
-        public static final int separator=0x7f0c00be;
-        public static final int shortcut=0x7f0c005d;
+        public static final int search_badge=0x7f0c006a;
+        public static final int search_bar=0x7f0c0069;
+        public static final int search_button=0x7f0c006b;
+        public static final int search_close_btn=0x7f0c0070;
+        public static final int search_edit_frame=0x7f0c006c;
+        public static final int search_go_btn=0x7f0c0072;
+        public static final int search_mag_icon=0x7f0c006d;
+        public static final int search_plate=0x7f0c006e;
+        public static final int search_src_text=0x7f0c006f;
+        public static final int search_voice_btn=0x7f0c0073;
+        public static final int select_dialog_listview=0x7f0c0074;
+        public static final int separator=0x7f0c00c2;
+        public static final int shortcut=0x7f0c005f;
         public static final int showCustom=0x7f0c0011;
         public static final int showHome=0x7f0c0012;
         public static final int showTitle=0x7f0c0013;
         public static final int small=0x7f0c0046;
-        public static final int snackbar_action=0x7f0c00a3;
-        public static final int snackbar_text=0x7f0c00a2;
+        public static final int smart=0x7f0c0048;
+        public static final int snackbar_action=0x7f0c00a7;
+        public static final int snackbar_text=0x7f0c00a6;
         public static final int split_action_bar=0x7f0c0008;
         public static final int src_atop=0x7f0c0038;
         public static final int src_in=0x7f0c0039;
         public static final int src_over=0x7f0c003a;
         public static final int standard=0x7f0c0040;
-        public static final int star=0x7f0c00d4;
+        public static final int star=0x7f0c00dc;
         public static final int start=0x7f0c0027;
-        public static final int status_bar_latest_event_content=0x7f0c00c6;
-        public static final int submit_area=0x7f0c006f;
-        public static final int subtitleTextView=0x7f0c00ac;
+        public static final int status_bar_latest_event_content=0x7f0c00ca;
+        public static final int submit_area=0x7f0c0071;
+        public static final int subtitleTextView=0x7f0c00b0;
         public static final int tabMode=0x7f0c000d;
-        public static final int text=0x7f0c00ce;
-        public static final int text2=0x7f0c00cc;
-        public static final int textSpacerNoButtons=0x7f0c0057;
-        public static final int textView=0x7f0c007c;
-        public static final int textView2=0x7f0c007e;
-        public static final int textView3=0x7f0c0082;
-        public static final int textView4=0x7f0c0083;
-        public static final int textView5=0x7f0c0074;
-        public static final int textView6=0x7f0c0086;
-        public static final int textView7=0x7f0c0094;
-        public static final int time=0x7f0c00ca;
-        public static final int title=0x7f0c0050;
-        public static final int titleFooter=0x7f0c00b5;
-        public static final int titleTextView=0x7f0c00a5;
-        public static final int title_template=0x7f0c0053;
-        public static final int toolbar=0x7f0c00c1;
+        public static final int tb=0x7f0c0099;
+        public static final int text=0x7f0c00d2;
+        public static final int text2=0x7f0c00d0;
+        public static final int textSpacerNoButtons=0x7f0c0059;
+        public static final int textView=0x7f0c007f;
+        public static final int textView2=0x7f0c0081;
+        public static final int textView3=0x7f0c0085;
+        public static final int textView4=0x7f0c0086;
+        public static final int textView5=0x7f0c0077;
+        public static final int textView6=0x7f0c0089;
+        public static final int time=0x7f0c00ce;
+        public static final int title=0x7f0c0052;
+        public static final int titleFooter=0x7f0c00b9;
+        public static final int titleTextView=0x7f0c00a9;
+        public static final int title_template=0x7f0c0055;
+        public static final int toolbar=0x7f0c00c5;
         public static final int top=0x7f0c0028;
-        public static final int topPanel=0x7f0c0052;
+        public static final int topPanel=0x7f0c0054;
         public static final int unknown=0x7f0c003d;
         public static final int up=0x7f0c0009;
         public static final int useLogo=0x7f0c0014;
-        public static final int userBackground=0x7f0c00b6;
-        public static final int userData=0x7f0c00ba;
-        public static final int userEmail=0x7f0c00bc;
-        public static final int userName=0x7f0c00bb;
-        public static final int userPhoto=0x7f0c00b7;
-        public static final int userPhotoTree=0x7f0c00b9;
-        public static final int userPhotoTwo=0x7f0c00b8;
+        public static final int userBackground=0x7f0c00ba;
+        public static final int userData=0x7f0c00be;
+        public static final int userEmail=0x7f0c00c0;
+        public static final int userName=0x7f0c00bf;
+        public static final int userPhoto=0x7f0c00bb;
+        public static final int userPhotoTree=0x7f0c00bd;
+        public static final int userPhotoTwo=0x7f0c00bc;
         public static final int view_offset_helper=0x7f0c000a;
+        public static final int viewpager=0x7f0c0076;
+        public static final int viewpagertab=0x7f0c0075;
         public static final int withText=0x7f0c0030;
         public static final int wrap_content=0x7f0c0035;
     }
@@ -2693,46 +2914,49 @@ containing a value of this type.
         public static final int design_navigation_item_separator=0x7f040025;
         public static final int design_navigation_item_subheader=0x7f040026;
         public static final int design_navigation_menu=0x7f040027;
-        public static final int fragment_challenge_home=0x7f040028;
-        public static final int invitefriendlist_item=0x7f040029;
-        public static final int joinitem=0x7f04002a;
-        public static final int layout_snackbar=0x7f04002b;
-        public static final int layout_snackbar_include=0x7f04002c;
-        public static final int material_basic_buttons_card=0x7f04002d;
-        public static final int material_basic_image_buttons_card_layout=0x7f04002e;
-        public static final int material_basic_list_card_layout=0x7f04002f;
-        public static final int material_big_image_card_layout=0x7f040030;
-        public static final int material_image_with_buttons_card=0x7f040031;
-        public static final int material_small_image_card=0x7f040032;
-        public static final int material_welcome_card_layout=0x7f040033;
-        public static final int messenger_button_send_blue_large=0x7f040034;
-        public static final int messenger_button_send_blue_round=0x7f040035;
-        public static final int messenger_button_send_blue_small=0x7f040036;
-        public static final int messenger_button_send_white_large=0x7f040037;
-        public static final int messenger_button_send_white_round=0x7f040038;
-        public static final int messenger_button_send_white_small=0x7f040039;
-        public static final int navigation_container=0x7f04003a;
-        public static final int navigation_list_drawer=0x7f04003b;
-        public static final int navigation_list_footer=0x7f04003c;
-        public static final int navigation_list_header=0x7f04003d;
-        public static final int navigation_list_item=0x7f04003e;
-        public static final int navigation_main_actionbar_dark=0x7f04003f;
-        public static final int navigation_main_actionbar_light=0x7f040040;
-        public static final int navigation_main_dark=0x7f040041;
-        public static final int navigation_main_light=0x7f040042;
-        public static final int notification_media_action=0x7f040043;
-        public static final int notification_media_cancel_action=0x7f040044;
-        public static final int notification_template_big_media=0x7f040045;
-        public static final int notification_template_big_media_narrow=0x7f040046;
-        public static final int notification_template_lines=0x7f040047;
-        public static final int notification_template_media=0x7f040048;
-        public static final int notification_template_part_chronometer=0x7f040049;
-        public static final int notification_template_part_time=0x7f04004a;
-        public static final int roomlist_item=0x7f04004b;
-        public static final int select_dialog_item_material=0x7f04004c;
-        public static final int select_dialog_multichoice_material=0x7f04004d;
-        public static final int select_dialog_singlechoice_material=0x7f04004e;
-        public static final int support_simple_spinner_dropdown_item=0x7f04004f;
+        public static final int fragment_challenge_chat_activity=0x7f040028;
+        public static final int fragment_challenge_friend_list=0x7f040029;
+        public static final int fragment_challenge_home=0x7f04002a;
+        public static final int invitefriendlist_item=0x7f04002b;
+        public static final int joinitem=0x7f04002c;
+        public static final int layout_snackbar=0x7f04002d;
+        public static final int layout_snackbar_include=0x7f04002e;
+        public static final int material_basic_buttons_card=0x7f04002f;
+        public static final int material_basic_image_buttons_card_layout=0x7f040030;
+        public static final int material_basic_list_card_layout=0x7f040031;
+        public static final int material_big_image_card_layout=0x7f040032;
+        public static final int material_image_with_buttons_card=0x7f040033;
+        public static final int material_small_image_card=0x7f040034;
+        public static final int material_welcome_card_layout=0x7f040035;
+        public static final int messenger_button_send_blue_large=0x7f040036;
+        public static final int messenger_button_send_blue_round=0x7f040037;
+        public static final int messenger_button_send_blue_small=0x7f040038;
+        public static final int messenger_button_send_white_large=0x7f040039;
+        public static final int messenger_button_send_white_round=0x7f04003a;
+        public static final int messenger_button_send_white_small=0x7f04003b;
+        public static final int navigation_container=0x7f04003c;
+        public static final int navigation_list_drawer=0x7f04003d;
+        public static final int navigation_list_footer=0x7f04003e;
+        public static final int navigation_list_header=0x7f04003f;
+        public static final int navigation_list_item=0x7f040040;
+        public static final int navigation_main_actionbar_dark=0x7f040041;
+        public static final int navigation_main_actionbar_light=0x7f040042;
+        public static final int navigation_main_dark=0x7f040043;
+        public static final int navigation_main_light=0x7f040044;
+        public static final int notification_media_action=0x7f040045;
+        public static final int notification_media_cancel_action=0x7f040046;
+        public static final int notification_template_big_media=0x7f040047;
+        public static final int notification_template_big_media_narrow=0x7f040048;
+        public static final int notification_template_lines=0x7f040049;
+        public static final int notification_template_media=0x7f04004a;
+        public static final int notification_template_part_chronometer=0x7f04004b;
+        public static final int notification_template_part_time=0x7f04004c;
+        public static final int processfrienditem=0x7f04004d;
+        public static final int roomlist_item=0x7f04004e;
+        public static final int select_dialog_item_material=0x7f04004f;
+        public static final int select_dialog_multichoice_material=0x7f040050;
+        public static final int select_dialog_singlechoice_material=0x7f040051;
+        public static final int support_simple_spinner_dropdown_item=0x7f040052;
     }
     public static final class menu {
         public static final int menu_challenge_home=0x7f0d0000;
@@ -2790,21 +3014,22 @@ containing a value of this type.
         public static final int enter_item_name_position=0x7f060029;
         public static final int facebook_app_id=0x7f06002a;
         public static final int header_not_created=0x7f06002b;
-        public static final int hello_world=0x7f06002c;
-        public static final int list_hide_item=0x7f06002d;
-        public static final int list_null_or_empty=0x7f06002e;
+        public static final int hello_blank_fragment=0x7f06002c;
+        public static final int hello_world=0x7f06002d;
+        public static final int list_hide_item=0x7f06002e;
+        public static final int list_null_or_empty=0x7f06002f;
         public static final int messenger_send_button_text=0x7f06001d;
-        public static final int remove_selector_navigation=0x7f06002f;
-        public static final int start_navigation_listener=0x7f060030;
-        public static final int status_bar_notification_info_overflow=0x7f060031;
-        public static final int title_activity_challenge_home=0x7f060032;
-        public static final int title_activity_invite_friend=0x7f060033;
-        public static final int title_activity_join=0x7f060034;
-        public static final int title_activity_new_room=0x7f060035;
-        public static final int title_activity_room_home=0x7f060036;
-        public static final int title_activity_test=0x7f060037;
-        public static final int title_null_or_empty=0x7f060038;
-        public static final int value_icon_should_be_0=0x7f060039;
+        public static final int remove_selector_navigation=0x7f060030;
+        public static final int start_navigation_listener=0x7f060031;
+        public static final int status_bar_notification_info_overflow=0x7f060032;
+        public static final int title_activity_challenge_home=0x7f060033;
+        public static final int title_activity_invite_friend=0x7f060034;
+        public static final int title_activity_join=0x7f060035;
+        public static final int title_activity_new_room=0x7f060036;
+        public static final int title_activity_room_home=0x7f060037;
+        public static final int title_activity_test=0x7f060038;
+        public static final int title_null_or_empty=0x7f060039;
+        public static final int value_icon_should_be_0=0x7f06003a;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f080076;
@@ -8890,5 +9115,443 @@ containing a value of this type.
           @attr name com.example.donkey.versus:com_facebook_preset_size
         */
         public static final int com_facebook_profile_picture_view_com_facebook_preset_size = 0;
+        /** Attributes that can be used with a stl_SmartTabLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_clickable com.example.donkey.versus:stl_clickable}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_customTabTextLayoutId com.example.donkey.versus:stl_customTabTextLayoutId}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_customTabTextViewId com.example.donkey.versus:stl_customTabTextViewId}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_defaultTabBackground com.example.donkey.versus:stl_defaultTabBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_defaultTabTextAllCaps com.example.donkey.versus:stl_defaultTabTextAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_defaultTabTextColor com.example.donkey.versus:stl_defaultTabTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_defaultTabTextHorizontalPadding com.example.donkey.versus:stl_defaultTabTextHorizontalPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_defaultTabTextMinWidth com.example.donkey.versus:stl_defaultTabTextMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_defaultTabTextSize com.example.donkey.versus:stl_defaultTabTextSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_distributeEvenly com.example.donkey.versus:stl_distributeEvenly}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_dividerColor com.example.donkey.versus:stl_dividerColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_dividerColors com.example.donkey.versus:stl_dividerColors}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_dividerThickness com.example.donkey.versus:stl_dividerThickness}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_indicatorAlwaysInCenter com.example.donkey.versus:stl_indicatorAlwaysInCenter}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_indicatorColor com.example.donkey.versus:stl_indicatorColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_indicatorColors com.example.donkey.versus:stl_indicatorColors}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_indicatorCornerRadius com.example.donkey.versus:stl_indicatorCornerRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_indicatorGravity com.example.donkey.versus:stl_indicatorGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_indicatorInFront com.example.donkey.versus:stl_indicatorInFront}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_indicatorInterpolation com.example.donkey.versus:stl_indicatorInterpolation}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_indicatorThickness com.example.donkey.versus:stl_indicatorThickness}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_indicatorWithoutPadding com.example.donkey.versus:stl_indicatorWithoutPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_overlineColor com.example.donkey.versus:stl_overlineColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_overlineThickness com.example.donkey.versus:stl_overlineThickness}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_underlineColor com.example.donkey.versus:stl_underlineColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #stl_SmartTabLayout_stl_underlineThickness com.example.donkey.versus:stl_underlineThickness}</code></td><td></td></tr>
+           </table>
+           @see #stl_SmartTabLayout_stl_clickable
+           @see #stl_SmartTabLayout_stl_customTabTextLayoutId
+           @see #stl_SmartTabLayout_stl_customTabTextViewId
+           @see #stl_SmartTabLayout_stl_defaultTabBackground
+           @see #stl_SmartTabLayout_stl_defaultTabTextAllCaps
+           @see #stl_SmartTabLayout_stl_defaultTabTextColor
+           @see #stl_SmartTabLayout_stl_defaultTabTextHorizontalPadding
+           @see #stl_SmartTabLayout_stl_defaultTabTextMinWidth
+           @see #stl_SmartTabLayout_stl_defaultTabTextSize
+           @see #stl_SmartTabLayout_stl_distributeEvenly
+           @see #stl_SmartTabLayout_stl_dividerColor
+           @see #stl_SmartTabLayout_stl_dividerColors
+           @see #stl_SmartTabLayout_stl_dividerThickness
+           @see #stl_SmartTabLayout_stl_indicatorAlwaysInCenter
+           @see #stl_SmartTabLayout_stl_indicatorColor
+           @see #stl_SmartTabLayout_stl_indicatorColors
+           @see #stl_SmartTabLayout_stl_indicatorCornerRadius
+           @see #stl_SmartTabLayout_stl_indicatorGravity
+           @see #stl_SmartTabLayout_stl_indicatorInFront
+           @see #stl_SmartTabLayout_stl_indicatorInterpolation
+           @see #stl_SmartTabLayout_stl_indicatorThickness
+           @see #stl_SmartTabLayout_stl_indicatorWithoutPadding
+           @see #stl_SmartTabLayout_stl_overlineColor
+           @see #stl_SmartTabLayout_stl_overlineThickness
+           @see #stl_SmartTabLayout_stl_underlineColor
+           @see #stl_SmartTabLayout_stl_underlineThickness
+         */
+        public static final int[] stl_SmartTabLayout = {
+            0x7f01011a, 0x7f01011b, 0x7f01011c, 0x7f01011d,
+            0x7f01011e, 0x7f01011f, 0x7f010120, 0x7f010121,
+            0x7f010122, 0x7f010123, 0x7f010124, 0x7f010125,
+            0x7f010126, 0x7f010127, 0x7f010128, 0x7f010129,
+            0x7f01012a, 0x7f01012b, 0x7f01012c, 0x7f01012d,
+            0x7f01012e, 0x7f01012f, 0x7f010130, 0x7f010131,
+            0x7f010132, 0x7f010133
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_clickable}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_clickable
+        */
+        public static final int stl_SmartTabLayout_stl_clickable = 25;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_customTabTextLayoutId}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.donkey.versus:stl_customTabTextLayoutId
+        */
+        public static final int stl_SmartTabLayout_stl_customTabTextLayoutId = 22;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_customTabTextViewId}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.donkey.versus:stl_customTabTextViewId
+        */
+        public static final int stl_SmartTabLayout_stl_customTabTextViewId = 23;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_defaultTabBackground}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.donkey.versus:stl_defaultTabBackground
+        */
+        public static final int stl_SmartTabLayout_stl_defaultTabBackground = 16;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_defaultTabTextAllCaps}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_defaultTabTextAllCaps
+        */
+        public static final int stl_SmartTabLayout_stl_defaultTabTextAllCaps = 17;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_defaultTabTextColor}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name com.example.donkey.versus:stl_defaultTabTextColor
+        */
+        public static final int stl_SmartTabLayout_stl_defaultTabTextColor = 18;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_defaultTabTextHorizontalPadding}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_defaultTabTextHorizontalPadding
+        */
+        public static final int stl_SmartTabLayout_stl_defaultTabTextHorizontalPadding = 20;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_defaultTabTextMinWidth}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_defaultTabTextMinWidth
+        */
+        public static final int stl_SmartTabLayout_stl_defaultTabTextMinWidth = 21;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_defaultTabTextSize}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_defaultTabTextSize
+        */
+        public static final int stl_SmartTabLayout_stl_defaultTabTextSize = 19;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_distributeEvenly}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_distributeEvenly
+        */
+        public static final int stl_SmartTabLayout_stl_distributeEvenly = 24;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_dividerColor}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_dividerColor
+        */
+        public static final int stl_SmartTabLayout_stl_dividerColor = 13;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_dividerColors}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.donkey.versus:stl_dividerColors
+        */
+        public static final int stl_SmartTabLayout_stl_dividerColors = 14;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_dividerThickness}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_dividerThickness
+        */
+        public static final int stl_SmartTabLayout_stl_dividerThickness = 15;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_indicatorAlwaysInCenter}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_indicatorAlwaysInCenter
+        */
+        public static final int stl_SmartTabLayout_stl_indicatorAlwaysInCenter = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_indicatorColor}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_indicatorColor
+        */
+        public static final int stl_SmartTabLayout_stl_indicatorColor = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_indicatorColors}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.donkey.versus:stl_indicatorColors
+        */
+        public static final int stl_SmartTabLayout_stl_indicatorColors = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_indicatorCornerRadius}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_indicatorCornerRadius
+        */
+        public static final int stl_SmartTabLayout_stl_indicatorCornerRadius = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_indicatorGravity}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>bottom</code></td><td>0</td><td></td></tr>
+<tr><td><code>top</code></td><td>1</td><td></td></tr>
+<tr><td><code>center</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name com.example.donkey.versus:stl_indicatorGravity
+        */
+        public static final int stl_SmartTabLayout_stl_indicatorGravity = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_indicatorInFront}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_indicatorInFront
+        */
+        public static final int stl_SmartTabLayout_stl_indicatorInFront = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_indicatorInterpolation}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>smart</code></td><td>0</td><td></td></tr>
+<tr><td><code>linear</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.example.donkey.versus:stl_indicatorInterpolation
+        */
+        public static final int stl_SmartTabLayout_stl_indicatorInterpolation = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_indicatorThickness}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_indicatorThickness
+        */
+        public static final int stl_SmartTabLayout_stl_indicatorThickness = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_indicatorWithoutPadding}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_indicatorWithoutPadding
+        */
+        public static final int stl_SmartTabLayout_stl_indicatorWithoutPadding = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_overlineColor}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_overlineColor
+        */
+        public static final int stl_SmartTabLayout_stl_overlineColor = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_overlineThickness}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_overlineThickness
+        */
+        public static final int stl_SmartTabLayout_stl_overlineThickness = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_underlineColor}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_underlineColor
+        */
+        public static final int stl_SmartTabLayout_stl_underlineColor = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.example.donkey.versus.R.attr#stl_underlineThickness}
+          attribute's value can be found in the {@link #stl_SmartTabLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.donkey.versus:stl_underlineThickness
+        */
+        public static final int stl_SmartTabLayout_stl_underlineThickness = 12;
     };
 }

@@ -132,7 +132,7 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
         p.execute(new GetUserCallback() {
             @Override
             public void done(JSONArray jsonarray) {
-                //Log.d("DebugLog", jsonarray.toString());
+                Log.d("DebugLog", jsonarray.toString());
 
                 try {
                     JSONObject jsonobject;
@@ -160,7 +160,7 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
                         for (int j = 0; j < CompetitorRoom.size(); j++) {
                             if (CompetitorRoom.get(j).getFbid().equals(jsonobject.getString("user_uid"))) {
                                 CompetitorRoom.get(j).addTotalCount();
-                                Log.d("DebugLog", CompetitorRoom.get(j).getName() + "加一");
+                                //Log.d("DebugLog", CompetitorRoom.get(j).getName() + "加一");
                                 break;
                             }
                         }
