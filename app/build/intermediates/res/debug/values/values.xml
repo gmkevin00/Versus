@@ -57,6 +57,16 @@
     <color name="com_facebook_likeboxcountview_text_color">#6a7180</color>
     <color name="com_facebook_likeview_text_color">#6a7180</color>
     <color name="com_facebook_share_button_text_color">#FFFFFF</color>
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.github.dmytrodanylyk.circular-progress-button/library/1.1.3/res/values/values.xml -->
+    <eat-comment/>
+    <color name="cpb_blue">#ff0099cc</color>
+    <color name="cpb_blue_dark">#ff00719b</color>
+    <color name="cpb_green">#ff99cc00</color>
+    <color name="cpb_green_dark">#ff6d9b00</color>
+    <color name="cpb_grey">#ffdedede</color>
+    <color name="cpb_red">#ffff4444</color>
+    <color name="cpb_red_dark">#ffcd3a3a</color>
+    <color name="cpb_white">@android:color/white</color>
     <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.github.dexafree/materiallist/3.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="description_color">#878787</color>
@@ -177,6 +187,7 @@
     <declare-styleable name="AppBarLayout_LayoutParams"><attr name="layout_scrollFlags"><flag name="scroll" value="0x1"/><flag name="exitUntilCollapsed" value="0x2"/><flag name="enterAlways" value="0x4"/><flag name="enterAlwaysCollapsed" value="0x8"/></attr><attr format="reference" name="layout_scrollInterpolator"/></declare-styleable>
     <declare-styleable name="AppCompatTextView"><attr format="reference|boolean" name="textAllCaps"/><attr name="android:textAppearance"/></declare-styleable>
     <declare-styleable name="CardView"><attr format="color" name="cardBackgroundColor"/><attr format="dimension" name="cardCornerRadius"/><attr format="dimension" name="cardElevation"/><attr format="dimension" name="cardMaxElevation"/><attr format="boolean" name="cardUseCompatPadding"/><attr format="boolean" name="cardPreventCornerOverlap"/><attr format="dimension" name="contentPadding"/><attr format="dimension" name="contentPaddingLeft"/><attr format="dimension" name="contentPaddingRight"/><attr format="dimension" name="contentPaddingTop"/><attr format="dimension" name="contentPaddingBottom"/></declare-styleable>
+    <declare-styleable name="CircularProgressButton"><attr format="reference" name="cpb_selectorIdle"/><attr format="reference" name="cpb_selectorComplete"/><attr format="reference" name="cpb_selectorError"/><attr format="string" name="cpb_textComplete"/><attr format="string" name="cpb_textIdle"/><attr format="string" name="cpb_textError"/><attr format="string" name="cpb_textProgress"/><attr format="color" name="cpb_colorProgress"/><attr format="color" name="cpb_colorIndicator"/><attr format="color" name="cpb_colorIndicatorBackground"/><attr format="reference" name="cpb_iconError"/><attr format="reference" name="cpb_iconComplete"/><attr format="dimension" name="cpb_cornerRadius"/><attr format="dimension" name="cpb_paddingProgress"/></declare-styleable>
     <declare-styleable name="CollapsingAppBarLayout_LayoutParams"><attr name="layout_collapseMode"><enum name="none" value="0"/><enum name="pin" value="1"/><enum name="parallax" value="2"/></attr><attr format="float" name="layout_collapseParallaxMultiplier"/></declare-styleable>
     <declare-styleable name="CollapsingToolbarLayout"><attr format="dimension" name="expandedTitleMargin"/><attr format="dimension" name="expandedTitleMarginStart"/><attr format="dimension" name="expandedTitleMarginTop"/><attr format="dimension" name="expandedTitleMarginEnd"/><attr format="dimension" name="expandedTitleMarginBottom"/><attr format="reference" name="expandedTitleTextAppearance"/><attr format="reference" name="collapsedTitleTextAppearance"/><attr format="color" name="contentScrim"/><attr format="color" name="statusBarScrim"/><attr format="reference" name="toolbarId"/></declare-styleable>
     <declare-styleable name="CoordinatorLayout"><attr format="reference" name="keylines"/><attr format="reference" name="statusBarBackground"/></declare-styleable>
@@ -313,6 +324,9 @@
     <dimen name="com_facebook_share_button_padding_top">12dp</dimen>
     <dimen name="com_facebook_share_button_text_size">16.0sp</dimen>
     <dimen name="com_facebook_tooltip_horizontal_padding">10dp</dimen>
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.github.dmytrodanylyk.circular-progress-button/library/1.1.3/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="cpb_stroke_width">4dp</dimen>
     <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/br.com.liveo/navigationdrawer-material/2.3.4/res/values/values.xml -->
     <eat-comment/>
     <dimen name="default_textSize">14sp</dimen>
@@ -482,6 +496,9 @@
     <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/br.com.liveo/navigationdrawer-material/2.3.4/res/values/values.xml -->
     <eat-comment/>
     <string name="custom_header_not_created">Custom header was not created</string>
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.github.dmytrodanylyk.circular-progress-button/library/1.1.3/res/values/values.xml -->
+    <eat-comment/>
+    <string name="define_circularprogressbutton">circularprogressbutton</string>
     <!-- From: file:/D:/文件/專題/Versus/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="drawer_close">Close navigation drawer</string>
@@ -499,6 +516,17 @@
     <eat-comment/>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.github.dmytrodanylyk.circular-progress-button/library/1.1.3/res/values/values.xml -->
+    <eat-comment/>
+    <string name="library_circularprogressbutton_author">Dmytro Danylyk</string>
+    <string name="library_circularprogressbutton_authorWebsite">http://dmytrodanylyk.com/</string>
+    <string name="library_circularprogressbutton_isOpenSource">true</string>
+    <string name="library_circularprogressbutton_libraryDescription">Android Button which can morph to Circular Progress.</string>
+    <string name="library_circularprogressbutton_libraryName">Circular Progress Button</string>
+    <string name="library_circularprogressbutton_libraryVersion">1.1.0</string>
+    <string name="library_circularprogressbutton_libraryWebsite">http://dmytrodanylyk.com/pages/portfolio/circular-progress-button.html</string>
+    <string name="library_circularprogressbutton_licenseId">mit</string>
+    <string name="library_circularprogressbutton_repositoryLink">https://github.com/dmytrodanylyk/circular-progress-button</string>
     <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/br.com.liveo/navigationdrawer-material/2.3.4/res/values/values.xml -->
     <eat-comment/>
     <string name="list_hide_item">The list is empty or has not been created</string>

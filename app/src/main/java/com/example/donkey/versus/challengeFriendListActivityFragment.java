@@ -19,7 +19,7 @@ public class challengeFriendListActivityFragment extends Fragment {
     private Room roomProfile;
     private User user;
     private ArrayList<Competitor> competitors=new ArrayList<Competitor>();
-    private int totalCount=20;
+    private int totalCount;
 
     private RecyclerView processFriendList;
     private LinearLayoutManager mLayoutManager;
@@ -40,14 +40,15 @@ public class challengeFriendListActivityFragment extends Fragment {
         this.roomProfile=(Room)bundle.getSerializable("Room");
         this.user=(User)bundle.getSerializable("User");
         this.competitors=(ArrayList)bundle.getSerializable("Competitors");
+        this.totalCount=bundle.getInt("dayCount");
 
+
+       // totalCount=
 
         processFriendList = (RecyclerView)view.findViewById(R.id.processFriendList);
-
         mLayoutManager = new LinearLayoutManager(getActivity());
         processFriendList.setLayoutManager(mLayoutManager);
-
-        processFriendAdapter f=new processFriendAdapter(user,competitors,totalCount);
+        processFriendAdapter f=new processFriendAdapter(user,competitors,totalCount,Integer.parseInt(roomProfile.getRoomCycle()));
         processFriendList.setAdapter(f);
 
 

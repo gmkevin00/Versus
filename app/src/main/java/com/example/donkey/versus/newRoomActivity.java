@@ -229,7 +229,18 @@ public class newRoomActivity extends ActionBarActivity implements View.OnClickLi
             newChallengeName.setText("");
         }
         if(parent.getId()==R.id.cycleSpinner){
-            newRoomCycle=position;
+            if(position==0)
+            {
+                newRoomCycle=1;
+            }
+            else if(position==1)
+            {
+                newRoomCycle=7;
+            }
+            else if(position==30)
+            {
+                newRoomCycle=30;
+            }
         }
 
     }
@@ -242,10 +253,10 @@ public class newRoomActivity extends ActionBarActivity implements View.OnClickLi
     @Override
     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
         if(dateSetter==0){
-            newRoomStart.setText(String.format("%d/%d/%d",year,monthOfYear+1,dayOfMonth));
+            newRoomStart.setText(String.format("%d-%d-%d",year,monthOfYear+1,dayOfMonth));
         }
         if(dateSetter==1){
-            newRoomEnd.setText(String.format("%d/%d/%d", year, monthOfYear+1, dayOfMonth));
+            newRoomEnd.setText(String.format("%d-%d-%d", year, monthOfYear+1, dayOfMonth));
         }
     }
 

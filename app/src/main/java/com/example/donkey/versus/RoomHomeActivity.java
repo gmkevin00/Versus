@@ -40,6 +40,8 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
 
     private HelpLiveo mHelpLiveo;
 
+    private ArrayList<personalProcess> personalProcessList=new ArrayList();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,16 +131,18 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
         phpConnect p=new phpConnect(this,"讀取資料中,請稍後...");
         p.setUrl(String.format("http://140.115.80.235/~group15/process.php"));
         p.addSendData("room_id", "" + selectedRoom.getRoomId());
+        p.addSendData("user_id", user.getFbid());
         p.execute(new GetUserCallback() {
             @Override
             public void done(JSONArray jsonarray) {
-                Log.d("DebugLog", jsonarray.toString());
+                //Log.d("DebugLog", jsonarray.toString());
 
                 try {
                     JSONObject jsonobject;
                     for (int i = 0; i < jsonarray.getJSONArray(0).length(); i++) {
                         jsonobject = jsonarray.getJSONArray(0).getJSONObject(i);
                         boolean flag = false;
+
                         for (int j = 0; j < CompetitorRoom.size(); j++) {
                             if (CompetitorRoom.get(j).getFbid().equals(jsonobject.getString("user_uid"))) {
                                 flag = true;
@@ -152,7 +156,6 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
                             CompetitorRoom.add(c);
                         }
 
-
                     }
 
                     for (int i = 0; i < jsonarray.getJSONArray(1).length(); i++) {
@@ -164,6 +167,17 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
                                 break;
                             }
                         }
+
+                        if(user.getFbid().equals(jsonobject.getString("user_uid")))
+                        {
+                            personalProcess pProcess=new personalProcess();
+                            pProcess.setCheck(Integer.parseInt(jsonobject.getString("process_check")));
+                           // Log.d("DebugLog", jsonobject.getString("process_check"));
+                            pProcess.setTime(jsonobject.getString("process_time"));
+                          //  Log.d("DebugLog", jsonobject.getString("process_time"));
+                            personalProcessList.add(pProcess);
+
+                        }
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -174,8 +188,10 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
                 intent.setClass(RoomHomeActivity.this, challengeHomeActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("User", user);
-                bundle.putSerializable("Roon", selectedRoom);
+                bundle.putSerializable("Room", selectedRoom);
                 bundle.putSerializable("Competitor", CompetitorRoom);
+                bundle.putSerializable("PersonalProcess", personalProcessList);
+
                 intent.putExtras(bundle);
                 int requestCode = 1;
                 startActivityForResult(intent, requestCode);

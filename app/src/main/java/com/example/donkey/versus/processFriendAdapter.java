@@ -20,12 +20,14 @@ public class processFriendAdapter extends RecyclerView.Adapter<processFriendAdap
     private ArrayList<Competitor> competitors=new ArrayList<Competitor>();
     private User user;
     private int totalCount;
+    private int cycle;
 
-    public processFriendAdapter(User user,ArrayList<Competitor> competitors,int totalCount)
+    public processFriendAdapter(User user,ArrayList<Competitor> competitors,int totalCount,int cycle)
     {
         this.competitors=competitors;
         this.user=user;
         this.totalCount=totalCount;
+        this.cycle=cycle;
     }
 
     @Override
@@ -43,7 +45,7 @@ public class processFriendAdapter extends RecyclerView.Adapter<processFriendAdap
     public void onBindViewHolder(ViewHolder holder, int position) {
         Picasso.with(holder.processFriendPhoto.getContext()).load(String.format("https://graph.facebook.com/%s/picture",competitors.get(position).getFbid())).into(holder.processFriendPhoto);
         holder.processFriendName.setText(competitors.get(position).getName());
-        holder.processFriendStep.setText(""+totalCount);
+        holder.processFriendStep.setText(competitors.get(  position).getTotalCount()*cycle+"/"+totalCount);
 
     }
 

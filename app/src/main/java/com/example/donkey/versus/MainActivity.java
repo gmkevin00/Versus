@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -18,7 +19,6 @@ import com.facebook.GraphResponse;
 import com.facebook.HttpMethod;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,7 +29,7 @@ import java.util.Arrays;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener{
 
-    LoginButton loginButton;
+    private Button loginButton;
     CallbackManager callbackManager;
 
 
@@ -45,14 +45,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         callbackManager = CallbackManager.Factory.create();
         AccessToken accessToken = AccessToken.getCurrentAccessToken();
-        if(accessToken!=null)
-        {
-            LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile", "user_friends"));
-            LoginManager.getInstance().registerCallback(callbackManager,callback);
-        }
-        loginButton = (LoginButton) findViewById(R.id.login_button);
-        loginButton.setReadPermissions("user_friends");
-        loginButton.registerCallback(callbackManager,callback);
+
+        loginButton = (Button) findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(this);
     }
 
     private FacebookCallback<LoginResult> callback=new FacebookCallback<LoginResult>() {
@@ -101,7 +96,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     }
     @Override
     public void onClick(View v) {
-
+        LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile", "user_friends"));
+        LoginManager.getInstance().registerCallback(callbackManager,callback);
     }
     public void userLoginDB(){
         phpConnect p=new phpConnect(this,"讀取資料中,請稍後...");
@@ -196,9 +192,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 HttpMethod.GET,
                 new GraphRequest.Callback() {
                     public void onCompleted(GraphResponse response) {
-                        Log.d("FB","Members: " + response.toString());
+                        //Log.d("FB","Members: " + response.toString());
                         JSONObject jsonFriend = response.getJSONObject();
-                        Log.d("DebugLog","Members: " + jsonFriend);
+                        //Log.d("DebugLog","Members: " + jsonFriend);
                         try {
                             ArrayList<String> friendlistId = new ArrayList<String>();
                             ArrayList<String> friendlistName = new ArrayList<String>();

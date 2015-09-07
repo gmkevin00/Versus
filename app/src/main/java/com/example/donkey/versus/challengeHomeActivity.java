@@ -13,12 +13,14 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 
 public class challengeHomeActivity extends ActionBarActivity {
     private Room roomProfile;
     private User user;
     private ArrayList<Competitor> competitors=new ArrayList<Competitor>();
+    private ArrayList<personalProcess> personalProcessList=new ArrayList();
 
     Button tb;
     @Override
@@ -31,6 +33,7 @@ public class challengeHomeActivity extends ActionBarActivity {
         this.roomProfile=(Room)bundle.getSerializable("Room");
         this.user=(User)bundle.getSerializable("User");
         this.competitors=(ArrayList)bundle.getSerializable("Competitor");
+        this.personalProcessList=(ArrayList)bundle.getSerializable("PersonalProcess");
 
         FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
                 getSupportFragmentManager(), FragmentPagerItems.with(this)
@@ -75,7 +78,19 @@ public class challengeHomeActivity extends ActionBarActivity {
         Bundle bundle=new Bundle();
         bundle.putSerializable("User",user);
         bundle.putSerializable("Competitors",competitors);
-        bundle.putSerializable("Room",roomProfile);
+        bundle.putSerializable("Room", roomProfile);
+        bundle.putSerializable("PersonalProcess", personalProcessList);
+
+        Calendar startDate = Calendar.getInstance();
+        String[] startSplit = roomProfile.getRoomStart().split("-");
+        startDate.set(Integer.parseInt(startSplit[0]), Integer.parseInt(startSplit[1])-1, Integer.parseInt(startSplit[2]));
+
+        Calendar endDate = Calendar.getInstance();
+        String[] endSplit = roomProfile.getRoomEnd().split("-");
+        endDate.set(Integer.parseInt(endSplit[0]), Integer.parseInt(endSplit[1])-1, Integer.parseInt(endSplit[2]));
+
+        int dayCount = endDate.get(Calendar.DAY_OF_YEAR) - startDate.get(Calendar.DAY_OF_YEAR);
+        bundle.putInt("dayCount",dayCount);
 
         return bundle;
     }
