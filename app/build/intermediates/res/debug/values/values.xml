@@ -197,6 +197,7 @@
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers"><flag name="none" value="0"/><flag name="beginning" value="1"/><flag name="middle" value="2"/><flag name="end" value="4"/></attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
+    <declare-styleable name="MaterialCalendarView"><attr format="reference" name="mcv_dateTextAppearance"/><attr format="reference" name="mcv_weekDayTextAppearance"/><attr format="reference" name="mcv_headerTextAppearance"/><attr format="color" name="mcv_arrowColor"/><attr format="reference" name="mcv_leftArrowMask"/><attr format="reference" name="mcv_rightArrowMask"/><attr format="color" name="mcv_selectionColor"/><attr format="boolean" name="mcv_showOtherDates"/><attr format="reference" name="mcv_weekDayLabels"/><attr format="reference" name="mcv_monthLabels"/><attr format="dimension" name="mcv_tileSize"/><attr format="enum" name="mcv_firstDayOfWeek"><enum name="sunday" value="1"/><enum name="monday" value="2"/><enum name="tuesday" value="3"/><enum name="wednesday" value="4"/><enum name="thursday" value="5"/><enum name="friday" value="6"/><enum name="saturday" value="7"/></attr></declare-styleable>
     <declare-styleable name="MaterialListView"><attr format="integer" name="column_count"/><attr format="integer" name="column_count_portrait"/><attr format="integer" name="column_count_landscape"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction"><flag name="never" value="0"/><flag name="ifRoom" value="1"/><flag name="always" value="2"/><flag name="withText" value="4"/><flag name="collapseActionView" value="8"/></attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
@@ -427,6 +428,9 @@
     <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.prolificinteractive/material-calendarview/0.8.1/res/values/values.xml -->
+    <eat-comment/>
+    <item name="mcv_pager" type="id"/>
     <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="progress_circular" type="id"/>
@@ -1859,6 +1863,18 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">?android:textColorSecondary</item>
         <item name="textAllCaps">true</item>
+    </style>
+    <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.prolificinteractive/material-calendarview/0.8.1/res/values/values.xml -->
+    <eat-comment/>
+    <style name="TextAppearance.MaterialCalendarWidget.Date" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/mcv_text_date_light</item>
+    </style>
+    <style name="TextAppearance.MaterialCalendarWidget.Header" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.MaterialCalendarWidget.WeekDay" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">12sp</item>
     </style>
     <!-- From: file:/D:/文件/專題/Versus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>

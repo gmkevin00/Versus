@@ -162,9 +162,12 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
                         jsonobject = jsonarray.getJSONArray(1).getJSONObject(i);
                         for (int j = 0; j < CompetitorRoom.size(); j++) {
                             if (CompetitorRoom.get(j).getFbid().equals(jsonobject.getString("user_uid"))) {
-                                CompetitorRoom.get(j).addTotalCount();
-                                //Log.d("DebugLog", CompetitorRoom.get(j).getName() + "加一");
-                                break;
+                                if(Integer.parseInt(jsonobject.getString("process_check"))==1)
+                                {
+                                    CompetitorRoom.get(j).addTotalCount();
+                                    Log.d("DebugLog", CompetitorRoom.get(j).getName() + "加一");
+                                    break;
+                                }
                             }
                         }
 

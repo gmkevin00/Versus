@@ -33,12 +33,13 @@ public class phpConnect {
 
     private ArrayList<String> sendVar=new ArrayList<String>();
     private ArrayList<String> sendText=new ArrayList<String>();
+    private boolean progresFlag=true;
 
     public phpConnect(Context showContext,String text){
-        progressdialog=new ProgressDialog(showContext);
-        progressdialog.setCancelable(false);
-        progressdialog.setTitle("處理中");
-        progressdialog.setMessage(text);
+            progressdialog=new ProgressDialog(showContext);
+            progressdialog.setCancelable(false);
+            progressdialog.setTitle("處理中");
+            progressdialog.setMessage(text);
     }
     public void setUrl(String urlString){
         try {
@@ -71,8 +72,17 @@ public class phpConnect {
         }
         return  sendString;
     }
+
+    public void setProgresFlag(Boolean flag)
+    {
+        this.progresFlag=flag;
+    }
+
     public void execute(GetUserCallback userCallback) {
-        progressdialog.show();
+        if(progresFlag)
+        {
+            progressdialog.show();
+        }
         new phpDataExchange(userCallback).execute();
     }
     public class phpDataExchange extends AsyncTask<Void, Void, JSONArray>{
@@ -127,7 +137,10 @@ public class phpConnect {
         }
         protected void onPostExecute(JSONArray result){
             super.onPostExecute(result);
-           progressdialog.dismiss();
+            if(progresFlag)
+            {
+                progressdialog.dismiss();
+            }
             userCallback.done(jsonarray);
         }
     }

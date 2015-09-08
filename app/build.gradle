@@ -43,4 +43,6 @@ dependencies {
     compile 'com.ogaclejapan.smarttablayout:utils-v4:1.3.0@aar'
 
     compile 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
+    compile 'pro.alexzaitsev:freepager:1.0.1'
+    compile 'com.prolificinteractive:material-calendarview:0.8.1'
 }
