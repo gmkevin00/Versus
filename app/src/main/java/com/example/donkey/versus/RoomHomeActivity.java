@@ -195,6 +195,7 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
                 bundle.putSerializable("Competitor", CompetitorRoom);
                 bundle.putSerializable("PersonalProcess", personalProcessList);
 
+
                 intent.putExtras(bundle);
                 int requestCode = 1;
                 startActivityForResult(intent, requestCode);

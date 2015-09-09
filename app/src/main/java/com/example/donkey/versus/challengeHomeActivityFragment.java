@@ -122,7 +122,7 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
         updateProcessList();
 
         editCalendar=(MaterialCalendarView)view.findViewById(R.id.editCalendar);
-        editCalendar.setSelectedDate(cycleEnd.toDate());
+        editCalendar.setSelectedDate(nowDate.toDate());
         decorateCalendar();
 
 
@@ -146,6 +146,7 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
             else
             {
                 p.addSendData("sql", String.format("UPDATE `process` SET  `process_check`=1 WHERE `room_id`=%d AND `user_id`='%s' AND '%s' <= DATE(process_time) AND '%s' > DATE(process_time); ", roomProfile.getRoomId(), user.getFbid(), cycleStart.toString(DateTimeFormat.forPattern("yyyy-MM-dd")), cycleEnd.toString(DateTimeFormat.forPattern("yyyy-MM-dd"))));
+                p.addSendData("sql3","");
             }
             p.addSendData("sql1", String.format("SELECT * FROM `game` LEFT OUTER JOIN `user` ON game.user_id=user.user_uid where `room_id`=%s", roomProfile.getRoomId()));
             p.addSendData("sql2", String.format("SELECT * FROM `process` LEFT OUTER JOIN `user` ON process.user_id=user.user_uid where `room_id`=%s AND '%s' <= DATE(process_time) AND '%s' > DATE(process_time)", roomProfile.getRoomId(), roomProfile.getRoomStart(), roomProfile.getRoomEnd()));
@@ -173,6 +174,7 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
             else
             {
                 p.addSendData("sql", String.format("UPDATE `process` SET  `process_check`=0 WHERE `room_id`=%d AND `user_id`='%s' AND '%s' <= DATE(process_time) AND '%s' > DATE(process_time); ", roomProfile.getRoomId(), user.getFbid(), cycleStart.toString(DateTimeFormat.forPattern("yyyy-MM-dd")), cycleEnd.toString(DateTimeFormat.forPattern("yyyy-MM-dd"))));
+                p.addSendData("sql3","");
             }
             p.addSendData("sql1", String.format("SELECT * FROM `game` LEFT OUTER JOIN `user` ON game.user_id=user.user_uid where `room_id`=%s", roomProfile.getRoomId()));
             p.addSendData("sql2", String.format("SELECT * FROM `process` LEFT OUTER JOIN `user` ON process.user_id=user.user_uid where `room_id`=%s AND '%s' <= DATE(process_time) AND '%s' > DATE(process_time)", roomProfile.getRoomId(), roomProfile.getRoomStart(), roomProfile.getRoomEnd()));
@@ -283,9 +285,9 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
             competitors=new ArrayList<>();
             personalProcessList=new ArrayList<>();
             JSONObject jsonobject;
-            for (int i = 0; i < jsonarray.getJSONArray(1).length(); i++) {
+            for (int i = 0; i < jsonarray.getJSONArray(2).length(); i++) {
 
-                jsonobject = jsonarray.getJSONArray(1).getJSONObject(i);
+                jsonobject = jsonarray.getJSONArray(2).getJSONObject(i);
                 boolean flag = false;
 
                 for (int j = 0; j < competitors.size(); j++) {
@@ -303,8 +305,8 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
 
             }
 
-            for (int i = 0; i < jsonarray.getJSONArray(2).length(); i++) {
-                jsonobject = jsonarray.getJSONArray(2).getJSONObject(i);
+            for (int i = 0; i < jsonarray.getJSONArray(3).length(); i++) {
+                jsonobject = jsonarray.getJSONArray(3).getJSONObject(i);
                 for (int j = 0; j < competitors.size(); j++) {
                     if (competitors.get(j).getFbid().equals(jsonobject.getString("user_uid"))) {
                         if(Integer.parseInt(jsonobject.getString("process_check"))==1)

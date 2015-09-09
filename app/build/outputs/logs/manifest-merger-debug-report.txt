@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:2:1-111:12
+ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:2:1-131:12
 	package
 		ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml
@@ -53,7 +53,7 @@ ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:21:9-23:22
 version
 ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:25:9-27:19
 application
-ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:49:5-109:19
+ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:49:5-129:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.3.0] D:\文件\專題\Versus\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.3.0\AndroidManifest.xml:28:5-20
 MERGED from [com.android.support:support-v4:23.0.0] D:\文件\專題\Versus\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:22.2.0] D:\文件\專題\Versus\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:22:5-20
@@ -248,6 +248,32 @@ category#com.example.donkey.versus
 ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:103:17-70
 	android:name
 		ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:103:27-67
+service#com.example.donkey.versus.MyGcmListenerService
+ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:107:9-113:19
+	android:exported
+		ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:109:13-37
+	android:name
+		ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:108:13-74
+intent-filter#com.google.android.c2dm.intent.RECEIVE
+ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:110:13-112:29
+service#com.example.donkey.versus.MyInstanceIDListenerService
+ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:116:9-122:19
+	android:exported
+		ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:118:13-37
+	android:name
+		ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:117:13-81
+intent-filter#com.google.android.gms.iid.InstanceID
+ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:119:13-121:29
+action#com.google.android.gms.iid.InstanceID
+ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:120:17-79
+	android:name
+		ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:120:25-77
+service#com.example.donkey.versus.RegistrationIntentService
+ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:124:9-127:19
+	android:exported
+		ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:126:13-37
+	android:name
+		ADDED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:125:13-79
 uses-sdk
 INJECTED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.facebook.android:facebook-android-sdk:4.3.0] D:\文件\專題\Versus\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.3.0\AndroidManifest.xml:24:5-26:41
@@ -449,7 +475,7 @@ MERGED from [com.google.android.gms:play-services-maps:7.5.0] D:\文件\專題\Versu
 	android:required
 		ADDED from [com.google.android.gms:play-services-maps:7.5.0] D:\文件\專題\Versus\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:26:8-31
 android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:2:1-111:12 reason: com.google.android.gms.maps requested WRITE_EXTERNAL_STORAGE
+IMPLIED from D:\文件\專題\Versus\app\src\main\AndroidManifest.xml:2:1-131:12 reason: com.google.android.gms.maps requested WRITE_EXTERNAL_STORAGE
 uses-permission#android.permission.GET_ACCOUNTS
 ADDED from [com.google.android.gms:play-services-wallet:7.5.0] D:\文件\專題\Versus\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.5.0\AndroidManifest.xml:21:5-70
 	android:name

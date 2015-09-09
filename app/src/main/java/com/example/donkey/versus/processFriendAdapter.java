@@ -45,7 +45,7 @@ public class processFriendAdapter extends RecyclerView.Adapter<processFriendAdap
     public void onBindViewHolder(ViewHolder holder, int position) {
         Picasso.with(holder.processFriendPhoto.getContext()).load(String.format("https://graph.facebook.com/%s/picture",competitors.get(position).getFbid())).into(holder.processFriendPhoto);
         holder.processFriendName.setText(competitors.get(position).getName());
-        holder.processFriendStep.setText(competitors.get(  position).getTotalCount()*cycle+"/"+totalCount);
+        holder.processFriendStep.setText(competitors.get(position).getTotalCount()*cycle+"/"+totalCount);
 
     }
 
