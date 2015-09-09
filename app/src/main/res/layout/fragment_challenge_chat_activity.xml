@@ -1,9 +1,54 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.donkey.versus.challengeChatActivityFragment">
+    tools:context="com.example.donkey.versus.challengeChatActivityFragment"
+    android:id="@+id/grid">
 
 
+    <EditText android:id="@+id/nameText" android:layout_height="wrap_content" android:text="player01"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_width="wrap_content"></EditText>
+
+    <ScrollView
+        android:layout_width="382dp"
+        android:onClick="onclick"
+        android:id="@+id/s"
+        android:fillViewport="false"
+        android:layout_row="1"
+        android:layout_column="4"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/Button01"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+    </ScrollView>
+
+    <EditText android:id="@+id/speakText" android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_row="9"
+        android:layout_column="0"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"></EditText>
+
+    <Button android:id="@+id/Button01" android:layout_height="wrap_content" android:text="send"
+        android:layout_row="0"
+        android:layout_column="4"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"></Button>
+
+    <TextView
+        android:id="@+id/chatText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_below="@+id/Button01"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp" />
 
 
-</FrameLayout>
+</RelativeLayout>

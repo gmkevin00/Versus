@@ -2,7 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.donkey.versus" >
 
+    <permission android:name="com.example.donkey.versus.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.donkey.versus.permission.C2D_MESSAGE" />
+    <!-- 接收 GCM 用 -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- 用來連接到 Google Services -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 收到訊息時保持 CPU 休眠 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
 
     <dependency>
         <groupId>
@@ -42,6 +51,9 @@ picasso
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -81,6 +93,17 @@ picasso
             android:name=".joinActivity"
             android:label="@string/title_activity_join" >
         </activity>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.donkey.versus" />
+            </intent-filter>
+        </receiver>
+
 
 
     </application>

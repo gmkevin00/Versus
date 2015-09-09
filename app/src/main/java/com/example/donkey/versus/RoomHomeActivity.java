@@ -165,7 +165,7 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
                                 if(Integer.parseInt(jsonobject.getString("process_check"))==1)
                                 {
                                     CompetitorRoom.get(j).addTotalCount();
-                                    Log.d("DebugLog", CompetitorRoom.get(j).getName() + "加一");
+                                  //  Log.d("DebugLog", CompetitorRoom.get(j).getName() + "加一");
                                     break;
                                 }
                             }
