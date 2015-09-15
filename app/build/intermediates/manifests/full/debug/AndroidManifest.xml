@@ -8,6 +8,11 @@
         android:minSdkVersion="19"
         android:targetSdkVersion="19" />
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <permission
         android:name="com.example.donkey.versus.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
@@ -64,7 +69,6 @@ aar
         </type>
     </dependency>
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -74,7 +78,6 @@ aar
 
     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 
     <application
@@ -102,12 +105,12 @@ aar
             android:value="@string/facebook_app_id" />
 
         <activity
-            android:name="com.example.donkey.versus.RoomHomeActivity"
-            android:label="@string/title_activity_room_home" >
-        </activity>
-        <activity
             android:name="com.example.donkey.versus.newRoomActivity"
             android:label="@string/title_activity_new_room" >
+        </activity>
+        <activity
+            android:name="com.example.donkey.versus.RoomHomeActivity"
+            android:label="@string/title_activity_room_home" >
         </activity>
         <activity
             android:name="com.example.donkey.versus.inviteFriendActivity"
@@ -121,39 +124,26 @@ aar
             android:name="com.example.donkey.versus.joinActivity"
             android:label="@string/title_activity_join" >
         </activity>
+        <activity
+            android:name="com.example.donkey.versus.navigationDrawerHome"
+            android:theme="@style/MyNavigationDrawerTheme" />
 
         <receiver
-            android:name="com.google.android.gms.gcm.GcmReceiver"
-            android:exported="true"
+            android:name="com.example.donkey.versus.GcmBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
 
-                <category android:name="com.example.donkey.versus" />
+                <category android:name="com.programmingtechniques.gcmdemo" />
             </intent-filter>
         </receiver>
 
-        <service
-            android:name="com.example.donkey.versus.MyGcmListenerService"
-            android:exported="false" >
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-            </intent-filter>
-        </service>
+        <service android:name="com.example.donkey.versus.GcmIntentService" />
+
         <!-- [END gcm_listener] -->
         <!-- [START instanceId_listener] -->
-        <service
-            android:name="com.example.donkey.versus.MyInstanceIDListenerService"
-            android:exported="false" >
-            <intent-filter>
-                <action android:name="com.google.android.gms.iid.InstanceID" />
-            </intent-filter>
-        </service>
         <!-- [END instanceId_listener] -->
-        <service
-            android:name="com.example.donkey.versus.RegistrationIntentService"
-            android:exported="false" >
-        </service>
+
 
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity

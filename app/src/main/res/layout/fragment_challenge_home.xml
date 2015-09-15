@@ -1,6 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#424242">
 
     <pro.alexzaitsev.freepager.library.view.core.VerticalPager
         android:id="@+id/vertical_pager"
@@ -23,7 +24,9 @@
                 android:text="本次進度:"
                 android:id="@+id/dateLabel"
                 android:layout_row="0"
-                android:layout_column="0" />
+                android:layout_column="0"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
 
             <com.dd.CircularProgressButton
                 android:id="@+id/successBtn"
@@ -50,6 +53,8 @@
                 app:cpb_textIdle="失敗"
                 android:layout_row="1"
                 android:layout_column="1" />
+
+
 
         </GridLayout>
 

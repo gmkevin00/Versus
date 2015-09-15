@@ -51,7 +51,7 @@ public class challengeChatActivityFragment extends Fragment {
         nameText=(EditText) view.findViewById(R.id.nameText);
         speakText=(EditText) view.findViewById(R.id.speakText);
         scrollView=(ScrollView)view.findViewById(R.id.s);
-        nameText.setText(user.getName());
+        nameText.setText(user.getFbid());
         p.setUrl(String.format("http://140.115.80.235/~group15/sql_connect.php"));
         p.addSendData("sql",String.format("SELECT * FROM chat WHERE `room_id`=%s",roomProfile.getRoomId()));
         p.execute(new GetUserCallback() {

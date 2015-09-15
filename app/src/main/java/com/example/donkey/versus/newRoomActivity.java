@@ -96,6 +96,8 @@ public class newRoomActivity extends ActionBarActivity implements View.OnClickLi
 
         addRoomButton=(Button)findViewById(R.id.addRoomButton);
         addRoomButton.setOnClickListener(this);
+
+
     }
 
     @Override

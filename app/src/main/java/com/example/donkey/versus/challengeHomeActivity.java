@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -13,8 +12,12 @@ import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
 
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 
 public class challengeHomeActivity extends ActionBarActivity {
@@ -22,6 +25,8 @@ public class challengeHomeActivity extends ActionBarActivity {
     private User user;
     private ArrayList<Competitor> competitors=new ArrayList<Competitor>();
     private ArrayList<personalProcess> personalProcessList=new ArrayList();
+
+
 
     Button tb;
     @Override
@@ -82,16 +87,19 @@ public class challengeHomeActivity extends ActionBarActivity {
         bundle.putSerializable("Room", roomProfile);
         bundle.putSerializable("PersonalProcess", personalProcessList);
 
-        Calendar startDate = Calendar.getInstance();
-        String[] startSplit = roomProfile.getRoomStart().split("-");
-        startDate.set(Integer.parseInt(startSplit[0]), Integer.parseInt(startSplit[1])-1, Integer.parseInt(startSplit[2]));
+        SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd");
 
-        Calendar endDate = Calendar.getInstance();
-        String[] endSplit = roomProfile.getRoomEnd().split("-");
-        endDate.set(Integer.parseInt(endSplit[0]), Integer.parseInt(endSplit[1])-1, Integer.parseInt(endSplit[2]));
+        try {
+            DateTime startDate=new DateTime(format.parse(roomProfile.getRoomStart()));
+            DateTime endDate=new DateTime(format.parse(roomProfile.getRoomEnd()));
+            int dayCount = Days.daysBetween(startDate,endDate).getDays();
+            bundle.putInt("dayCount",dayCount);
 
-        int dayCount = endDate.get(Calendar.DAY_OF_YEAR) - startDate.get(Calendar.DAY_OF_YEAR);
-        bundle.putInt("dayCount",dayCount);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
 
         return bundle;
     }

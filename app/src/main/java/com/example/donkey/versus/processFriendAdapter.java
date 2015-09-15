@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.daimajia.numberprogressbar.NumberProgressBar;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -45,7 +46,10 @@ public class processFriendAdapter extends RecyclerView.Adapter<processFriendAdap
     public void onBindViewHolder(ViewHolder holder, int position) {
         Picasso.with(holder.processFriendPhoto.getContext()).load(String.format("https://graph.facebook.com/%s/picture",competitors.get(position).getFbid())).into(holder.processFriendPhoto);
         holder.processFriendName.setText(competitors.get(position).getName());
-        holder.processFriendStep.setText(competitors.get(position).getTotalCount()*cycle+"/"+totalCount);
+        holder.processprogressbar.setMax(totalCount);
+        holder.processprogressbar.setProgress(competitors.get(position).getTotalCount()*cycle);
+        holder.processprogressbar.setProgressTextSize(30);
+        holder.processprogressbar.setMinimumHeight(20);
 
     }
 
@@ -59,7 +63,7 @@ public class processFriendAdapter extends RecyclerView.Adapter<processFriendAdap
     public  class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView processFriendPhoto;
         TextView processFriendName;
-        TextView processFriendStep;
+        NumberProgressBar processprogressbar;
 
 
         public ViewHolder(View itemLayoutView){
@@ -67,8 +71,7 @@ public class processFriendAdapter extends RecyclerView.Adapter<processFriendAdap
 
             this.processFriendPhoto=(ImageView)itemLayoutView.findViewById(R.id.processFriendPhoto);
             this.processFriendName=(TextView)itemLayoutView.findViewById(R.id.processFriendName);
-            this.processFriendStep=(TextView)itemLayoutView.findViewById(R.id.processFriendStep);
-
+            this.processprogressbar=(NumberProgressBar)itemLayoutView.findViewById(R.id.processprogressbar);
         }
 
         @Override

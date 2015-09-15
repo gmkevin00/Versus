@@ -46,8 +46,7 @@ public class RoomListAdapter extends BaseAdapter {
                     (ImageView) convertView.findViewById(R.id.imageView),
                     (TextView) convertView.findViewById(R.id.name),
                     (TextView) convertView.findViewById(R.id.start),
-                    (TextView) convertView.findViewById(R.id.end),
-                    (TextView) convertView.findViewById(R.id.star)
+                    (TextView) convertView.findViewById(R.id.end)
             );
             convertView.setTag(holder);
         }else{
@@ -58,7 +57,6 @@ public class RoomListAdapter extends BaseAdapter {
         holder.name.setText(r.getRoomName());
         holder.start.setText(r.getRoomStart());
         holder.end.setText(r.getRoomEnd());
-        holder.star.setText(String.format("%d", r.getRoomStar()));
         return convertView;
     }
 
@@ -67,13 +65,11 @@ public class RoomListAdapter extends BaseAdapter {
         TextView name;
         TextView start;
         TextView end;
-        TextView star;
-        public ViewHolder(ImageView photo, TextView name, TextView start, TextView end, TextView star){
+        public ViewHolder(ImageView photo, TextView name, TextView start, TextView end){
             this.photo=photo;
             this.name=name;
             this.start=start;
             this.end=end;
-            this.star=star;
         }
     }
 

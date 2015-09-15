@@ -1,13 +1,13 @@
 package com.example.donkey.versus;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.view.Menu;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
@@ -18,13 +18,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import br.liveo.Model.HelpLiveo;
-import br.liveo.interfaces.OnItemClickListener;
 
-
-
-
-public class RoomHomeActivity  extends ActionBarActivity implements View.OnClickListener,AdapterView.OnItemClickListener,OnItemClickListener {
+public class RoomHomeActivity  extends Fragment implements View.OnClickListener,AdapterView.OnItemClickListener {
     private ArrayList<Room> RoomUser;
     private User user;
     private ArrayList<Challenge> challengeSet;
@@ -38,40 +33,9 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
     private ArrayList<Join> UserJoin=new ArrayList<Join>();
 
 
-    private HelpLiveo mHelpLiveo;
 
     private ArrayList<personalProcess> personalProcessList=new ArrayList();
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_room_home);
-        Intent intent=this.getIntent();
-        Bundle bundle=intent.getExtras();
-        this.RoomUser=(ArrayList<Room>)bundle.getSerializable("Room");
-        this.UserJoin=(ArrayList<Join>)bundle.getSerializable("Join");
-        challengeSet=(ArrayList<Challenge>)bundle.getSerializable("Challenge");
-        user=(User)bundle.getSerializable("User");
-        RoomListView=(ListView)findViewById(R.id.RoomListView);
-        RoomListView.setOnItemClickListener(this);
-
-        adapter = new RoomListAdapter(RoomHomeActivity.this,RoomUser);
-        RoomListView.setAdapter(adapter);
-        addRoomButton=(Button)findViewById(R.id.addRoomButton);
-        addRoomButton.setOnClickListener(this);
-
-
-    }
-
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_room_home, menu);
-        entryInvitePage=menu.findItem(R.id.entryIinvitePage);
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -86,7 +50,7 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
         }
         if (id == R.id.entryIinvitePage) {
             Intent intent=new Intent();
-            intent.setClass(RoomHomeActivity.this, joinActivity.class);
+            intent.setClass(getActivity(), joinActivity.class);
 
 
             Bundle bundle=new Bundle();
@@ -101,6 +65,29 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view=inflater.inflate(R.layout.activity_room_home, container, false);
+
+        Intent intent=getActivity().getIntent();
+        Bundle bundle=intent.getExtras();
+        this.RoomUser=(ArrayList<Room>)bundle.getSerializable("Room");
+        this.UserJoin=(ArrayList<Join>)bundle.getSerializable("Join");
+        challengeSet=(ArrayList<Challenge>)bundle.getSerializable("Challenge");
+        user=(User)bundle.getSerializable("User");
+        RoomListView=(ListView)view.findViewById(R.id.RoomListView);
+        RoomListView.setOnItemClickListener(this);
+
+        adapter = new RoomListAdapter(getActivity(),RoomUser);
+        RoomListView.setAdapter(adapter);
+        addRoomButton=(Button)view.findViewById(R.id.addRoomButton);
+        addRoomButton.setOnClickListener(this);
+
+
+
+        return  view;
+    }
 
 
     @Override
@@ -108,7 +95,7 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
         if(v.getId()==R.id.addRoomButton)
         {
             Intent intent=new Intent();
-            intent.setClass(RoomHomeActivity.this,newRoomActivity.class);
+            intent.setClass(getActivity(),newRoomActivity.class);
             Bundle bundle=new Bundle();
             bundle.putSerializable("User",user);
             bundle.putSerializable("Challenge",challengeSet);
@@ -119,16 +106,19 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
 
     }
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        this.RoomUser=(ArrayList<Room>)data.getExtras().getSerializable("Room");
-        this.UserJoin=(ArrayList<Join>)data.getExtras().getSerializable("Invite");
-        adapter.updateResults(RoomUser);
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==8)
+        {
+            this.RoomUser=(ArrayList<Room>)data.getExtras().getSerializable("Room");
+            this.UserJoin=(ArrayList<Join>)data.getExtras().getSerializable("Invite");
+            adapter.updateResults(RoomUser);
+        }
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         selectedRoom=(Room)adapter.getItem(position);
-        phpConnect p=new phpConnect(this,"讀取資料中,請稍後...");
+        phpConnect p=new phpConnect(getActivity(),"讀取資料中,請稍後...");
         p.setUrl(String.format("http://140.115.80.235/~group15/process.php"));
         p.addSendData("room_id", "" + selectedRoom.getRoomId());
         p.addSendData("user_id", user.getFbid());
@@ -188,7 +178,7 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
                 }
 
                 Intent intent = new Intent();
-                intent.setClass(RoomHomeActivity.this, challengeHomeActivity.class);
+                intent.setClass(getActivity(), challengeHomeActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("User", user);
                 bundle.putSerializable("Room", selectedRoom);
@@ -204,12 +194,16 @@ public class RoomHomeActivity  extends ActionBarActivity implements View.OnClick
 
 
     }
+/*
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
 
-    public void onItemClick(int i) {
-        FragmentManager mFragmentManager = getSupportFragmentManager();
 
+        getMenuInflater().inflate(R.menu.menu_room_home, menu);
+        entryInvitePage=menu.findItem(R.id.entryIinvitePage);
+        return true;
     }
-
+*/
 
 
 

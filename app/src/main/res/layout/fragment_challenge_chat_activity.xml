@@ -10,7 +10,8 @@
         android:layout_column="0"
         android:layout_width="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/speakText"></EditText>
+        android:layout_toStartOf="@+id/speakText"
+        android:textColor="#FFFFFF"></EditText>
 
     <ScrollView
         android:layout_width="382dp"
@@ -25,6 +26,18 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true">
 
+        <TextView
+            android:id="@+id/chatText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_below="@+id/Button01"
+            android:layout_alignParentStart="true"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"/>
+
     </ScrollView>
 
     <EditText android:id="@+id/speakText" android:layout_height="wrap_content" android:text=""
@@ -32,7 +45,9 @@
         android:layout_row="9"
         android:layout_column="0"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"></EditText>
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"
+        ></EditText>
 
     <Button android:id="@+id/Button01" android:layout_height="wrap_content" android:text="send"
         android:layout_row="0"
@@ -41,16 +56,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"></Button>
 
-    <TextView
-        android:id="@+id/chatText"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_row="2"
-        android:layout_column="0"
-        android:layout_below="@+id/Button01"
-        android:layout_alignParentStart="true"
-        android:textSize="20dp" />
+
 
 
 </RelativeLayout>

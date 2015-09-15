@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dd.CircularProgressButton;
@@ -62,6 +63,8 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
     private Boolean dateRecord[][][]=new Boolean[100][13][32];
     private DayViewDecorator unfinishDecorate;
     private DayViewDecorator finishDecorate;
+
+    private ImageView processPhoto;
 
     public challengeHomeActivityFragment() {
     }
@@ -126,8 +129,8 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
         decorateCalendar();
 
 
-
-
+   //     processPhoto=(ImageView)view.findViewById(R.id.processPhoto);
+   //     Picasso.with(getContext()).load(String.format("https://graph.facebook.com/%s/picture",user.getFbid())).into(processPhoto);
 
         return view;
     }
