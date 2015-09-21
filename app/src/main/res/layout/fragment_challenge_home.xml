@@ -1,20 +1,22 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#424242">
+    android:background="#FFFFFF">
 
     <pro.alexzaitsev.freepager.library.view.core.VerticalPager
         android:id="@+id/vertical_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context="com.example.donkey.versus.challengeHomeActivityFragment"
-            android:id="@+id/grid">
+            android:id="@+id/grid"
+            android:weightSum="1">
 
 
             <TextView
@@ -23,10 +25,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="本次進度:"
                 android:id="@+id/dateLabel"
-                android:layout_row="0"
+                android:layout_row="4"
                 android:layout_column="0"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:layout_alignBottom="@+id/successBtn"
+                android:layout_alignParentStart="true" />
+
 
             <com.dd.CircularProgressButton
                 android:id="@+id/successBtn"
@@ -38,8 +44,10 @@
                 app:cpb_textComplete="O"
                 app:cpb_textError="Error"
                 app:cpb_textIdle="成功"
-                android:layout_row="1"
-                android:layout_column="0" />
+                android:layout_row="5"
+                android:layout_column="0"
+                android:layout_gravity="center_vertical"
+                android:layout_toEndOf="@+id/dateLabel" />
 
             <com.dd.CircularProgressButton
                 android:id="@+id/failBtn"
@@ -51,12 +59,14 @@
                 app:cpb_textComplete="Complete"
                 app:cpb_textError="X"
                 app:cpb_textIdle="失敗"
-                android:layout_row="1"
-                android:layout_column="1" />
+                android:layout_row="5"
+                android:layout_column="1"
+                android:layout_gravity="center_vertical"
+                android:layout_alignTop="@+id/successBtn"
+                android:layout_toEndOf="@+id/successBtn" />
 
 
-
-        </GridLayout>
+        </RelativeLayout>
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
@@ -75,10 +85,92 @@
 
         </LinearLayout>
 
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/personalPhoto"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                app:border_width="2dp"
+                app:border_color="#FF000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="倒數 1天 12小時 30分"
+                android:id="@+id/textView"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:src="@drawable/time12"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/textView" />
+
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:id="@+id/timeProgress"
+                android:layout_height="40dp"
+                android:layout_width="320dp"
+                android:layout_alignBottom="@+id/personalPhoto"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/imageView" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/rounded"
+                android:lines="3"
+                android:id="@+id/linearLayout"
+                android:layout_below="@+id/personalPhoto"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="33dp">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/edition2"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="15dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="進度查核"
+                    android:id="@+id/textView2"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
 
     </pro.alexzaitsev.freepager.library.view.core.VerticalPager>
 
 
-
-
-</FrameLayout>
+</LinearLayout>

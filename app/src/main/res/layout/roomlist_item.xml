@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#424242">
+    android:background="#FFFFFF">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -55,7 +55,8 @@
                     android:layout_width="13dp"
                     android:layout_height="13dp"
                     android:id="@+id/imageView3"
-                    android:src="@mipmap/sand" />
+                    android:src="@drawable/clock125"
+                    android:layout_marginLeft="10dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -63,7 +64,8 @@
                     android:text="開始時間:"
                     android:id="@+id/textView5"
                     android:textSize="15sp"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#212121"
+                    android:layout_marginLeft="5dp"/>
 
                 <TextView
                     android:id="@+id/start"
@@ -71,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:textSize="15sp"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#212121"
                     />
 
                 <TextView
@@ -80,7 +82,8 @@
                     android:text="結束時間:"
                     android:id="@+id/textView9"
                     android:textSize="15sp"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#212121"
+                    android:layout_marginLeft="5dp"/>
 
                 <TextView
                     android:id="@+id/end"
@@ -88,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:textSize="15sp"
-                    android:textColor="#FFFFFF"/>
+                    android:textColor="#212121"/>
             </LinearLayout>
 
 
@@ -104,7 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="6dp"
-                android:textColor="#FFFFFF"
+                android:textColor="#212121"
                 android:textSize="16sp"/>
 
 
@@ -112,7 +115,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="#BDBDBD" />
+            android:background="#B6B6B6" />
     </LinearLayout>
 
 

@@ -54,6 +54,8 @@ public class challengeHomeActivity extends ActionBarActivity {
         SmartTabLayout viewPagerTab = (SmartTabLayout) findViewById(R.id.viewpagertab);
         viewPagerTab.setViewPager(viewPager);
 
+
+
     }
 
 

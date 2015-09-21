@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -112,7 +111,6 @@ public class joinActivity extends ActionBarActivity implements View.OnClickListe
                         r.setRoomEnd(jsonobject.getString("room_end"));
                         r.setRoomStar(Integer.parseInt(jsonobject.getString("room_star")));
                         r.setRoomBoss(jsonobject.getString("room_boss"));
-                        Log.d("DebugLog", jsonobject.getString("room_name"));
                         UserRoom.add(r);
                     }
 

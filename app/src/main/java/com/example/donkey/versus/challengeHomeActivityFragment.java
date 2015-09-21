@@ -9,14 +9,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
 import com.dd.CircularProgressButton;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.DayViewDecorator;
 import com.prolificinteractive.materialcalendarview.DayViewFacade;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.squareup.picasso.Picasso;
 
 import org.joda.time.DateTime;
 import org.joda.time.Days;
@@ -29,6 +30,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 
 /**
@@ -64,7 +67,8 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
     private DayViewDecorator unfinishDecorate;
     private DayViewDecorator finishDecorate;
 
-    private ImageView processPhoto;
+    private CircleImageView personalPhoto;
+    private RoundCornerProgressBar timeProgress;
 
     public challengeHomeActivityFragment() {
     }
@@ -128,9 +132,14 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
         editCalendar.setSelectedDate(nowDate.toDate());
         decorateCalendar();
 
+        timeProgress = (RoundCornerProgressBar) view.findViewById(R.id.timeProgress);
+        timeProgress.setProgressColor(Color.parseColor("#ed3b27"));
+        timeProgress.setBackgroundColor(Color.parseColor("#808080"));
+        timeProgress.setMax(100);
+        timeProgress.setProgress(15);
 
-   //     processPhoto=(ImageView)view.findViewById(R.id.processPhoto);
-   //     Picasso.with(getContext()).load(String.format("https://graph.facebook.com/%s/picture",user.getFbid())).into(processPhoto);
+        personalPhoto=(CircleImageView) view.findViewById(R.id.personalPhoto);
+        Picasso.with(view.getContext()).load(String.format("https://graph.facebook.com/%s/picture",user.getFbid())).into(personalPhoto);
 
         return view;
     }

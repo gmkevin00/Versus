@@ -9,8 +9,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
+
+import com.melnykov.fab.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,7 +25,7 @@ public class RoomHomeActivity  extends Fragment implements View.OnClickListener,
     private User user;
     private ArrayList<Challenge> challengeSet;
     private ListView RoomListView;
-    private Button addRoomButton;
+    private FloatingActionButton addRoomFab;
     private RoomListAdapter adapter;
     private ArrayList<Competitor> CompetitorRoom = new ArrayList<Competitor>();
     private Room selectedRoom;
@@ -81,9 +82,11 @@ public class RoomHomeActivity  extends Fragment implements View.OnClickListener,
 
         adapter = new RoomListAdapter(getActivity(),RoomUser);
         RoomListView.setAdapter(adapter);
-        addRoomButton=(Button)view.findViewById(R.id.addRoomButton);
-        addRoomButton.setOnClickListener(this);
 
+
+        addRoomFab=(FloatingActionButton)view.findViewById(R.id.addRoomFab);
+        addRoomFab.attachToListView(RoomListView);
+        addRoomFab.setOnClickListener(this);
 
 
         return  view;
@@ -92,7 +95,7 @@ public class RoomHomeActivity  extends Fragment implements View.OnClickListener,
 
     @Override
     public void onClick(View v) {
-        if(v.getId()==R.id.addRoomButton)
+        if(v.getId()==R.id.addRoomFab)
         {
             Intent intent=new Intent();
             intent.setClass(getActivity(),newRoomActivity.class);
@@ -106,14 +109,7 @@ public class RoomHomeActivity  extends Fragment implements View.OnClickListener,
 
     }
 
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode==8)
-        {
-            this.RoomUser=(ArrayList<Room>)data.getExtras().getSerializable("Room");
-            this.UserJoin=(ArrayList<Join>)data.getExtras().getSerializable("Invite");
-            adapter.updateResults(RoomUser);
-        }
-    }
+
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

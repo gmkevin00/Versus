@@ -29,25 +29,35 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'joda-time:joda-time:2.8.2'
     compile 'com.facebook.android:facebook-android-sdk:4.3.0'
+    //image
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'de.hdodenhof:circleimageview:1.3.0'
+
+
+    
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'jp.wasabeef:recyclerview-animators:1.2.2'
     compile 'com.android.support:recyclerview-v7:+'
     compile 'com.android.support:cardview-v7:+'
-    compile "com.google.android.gms:play-services:7.5.+"
-
-
+    compile "com.google.android.gms:play-services:7.5.0"
+    //materiallist
     compile 'com.github.dexafree:materiallist:3.0.0'
-    compile 'br.com.liveo:navigationdrawer-material:2.3.4'
-
+    //smartTabLayout
     compile 'com.ogaclejapan.smarttablayout:library:1.3.0@aar'
     compile 'com.ogaclejapan.smarttablayout:utils-v4:1.3.0@aar'
-
+    //progressButton
     compile 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
+    //freepager
     compile 'pro.alexzaitsev:freepager:1.0.1'
+    //calendar
     compile 'com.prolificinteractive:material-calendarview:0.8.1'
-
+    //progressBar
     compile 'com.daimajia.numberprogressbar:library:1.2@aar'
-
+    compile 'com.akexorcist:RoundCornerProgressBar:1.2.2'
+    //Navigation Bar
     compile 'it.neokree:MaterialNavigationDrawer:1.3.3'
+
+    compile 'com.melnykov:floatingactionbutton:1.3.0'
+
+    compile 'com.akexorcist:RoundCornerProgressBar:1.2.2'
 }
