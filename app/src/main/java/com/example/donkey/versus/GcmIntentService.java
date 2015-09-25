@@ -75,7 +75,7 @@ public class GcmIntentService extends IntentService {
                 new NotificationCompat.Builder(this)
                         // .setSmallIcon(R.drawable.ic_stat_gcm)
                         .setContentTitle("Versus挑戰提醒")
-                        .setSmallIcon(R.drawable.ic_play_dark)
+                        .setSmallIcon(R.drawable.alarm)
                     //    .setSmallIcon(drawableSmallIcon)
                         .setStyle(new NotificationCompat.BigTextStyle()
                         .bigText(msg))

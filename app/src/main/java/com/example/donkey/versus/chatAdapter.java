@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -47,9 +46,9 @@ public class chatAdapter extends RecyclerView.Adapter<chatAdapter.ViewHolder> {
         if(user.getFbid().equals(chatList.get(position).getUserid()))
         {
             holder.chatCard.setBackgroundColor(Color.rgb(203, 224, 254));
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams
+         //   LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams();
 
-            holder.chatCard.gravity = RelativeLayout.ALIGN_PARENT_RIGHT;
+          //  holder.chatCard.gravity = RelativeLayout.ALIGN_PARENT_RIGHT;
         }
         else
         {

@@ -9,6 +9,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
@@ -70,6 +74,13 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
     private CircleImageView personalPhoto;
     private RoundCornerProgressBar timeProgress;
 
+    private ImageView successImg;
+    private ImageView failImg;
+    private int sucnowPicPos = 1;
+    private int failnowPicPos = 1;
+    private int[] successImgRes = {R.drawable.successimgtrue, R.drawable.successimgfalse};
+    private int[] failImgRes = {R.drawable.failimgtrue, R.drawable.failimgfalse};
+
     public challengeHomeActivityFragment() {
     }
 
@@ -101,9 +112,12 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
             dayPass= Days.daysBetween(startDate, nowDate).getDays();
 
             cycleStart= new DateTime(format.parse(roomProfile.getRoomStart()));
-            cycleStart=cycleStart.plusDays((dayPass/cycle)*cycle);
+            cycleStart=cycleStart.plusDays((dayPass / cycle) * cycle);
             cycleEnd= new DateTime(format.parse(roomProfile.getRoomStart()));
             cycleEnd=cycleEnd.plusDays((dayPass/cycle+1)*cycle);
+
+            successImg=(ImageView)view.findViewById(R.id.successImg);
+            failImg=(ImageView)view.findViewById(R.id.failImg);
 
             for(int i=0;i<personalProcessList.size();i++)
             {
@@ -114,10 +128,14 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
                     if(currentProcess.getCheck()==0)
                     {
                         failBtn.setProgress(-1);
+                        failImg.setImageResource(R.drawable.failimgtrue);
+                        failnowPicPos=0;
                     }
                     else if(currentProcess.getCheck()==1)
                     {
                         successBtn.setProgress(100);
+                        successImg.setImageResource(R.drawable.successimgtrue);
+                        sucnowPicPos=0;
                     }
                 }
             }
@@ -141,12 +159,25 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
         personalPhoto=(CircleImageView) view.findViewById(R.id.personalPhoto);
         Picasso.with(view.getContext()).load(String.format("https://graph.facebook.com/%s/picture",user.getFbid())).into(personalPhoto);
 
+
+
+
         return view;
     }
 
     public void onClick(View v) {
         if(v.getId()==R.id.successBtn)
         {
+            if(sucnowPicPos==1)
+            {
+                fadeOutAndHideImage(successImg);
+            }
+            if(failnowPicPos==0)
+            {
+                fadeOutAndHideImage(failImg);
+            }
+
+
             successBtn.setProgress(99);
             phpConnect p=new phpConnect(getContext(),"讀取資料中,請稍後...");
             p.setProgresFlag(false);
@@ -174,6 +205,14 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
         }
         else if(v.getId()==R.id.failBtn)
         {
+            if(sucnowPicPos==0)
+            {
+                fadeOutAndHideImage(successImg);
+            }
+            if(failnowPicPos==1)
+            {
+                fadeOutAndHideImage(failImg);
+            }
 
             failBtn.setProgress(99);
             phpConnect p=new phpConnect(getContext(),"讀取資料中,請稍後...");
@@ -342,9 +381,64 @@ public class challengeHomeActivityFragment extends Fragment  implements View.OnC
             }
         } catch (JSONException e) {
             e.printStackTrace();
-            Log.d("DebugLog", "QAQ");
+            Log.d("DebugLog", e.toString());
         }
         updateProcessList();
         editCalendar.invalidateDecorators();
+    }
+
+    private void fadeOutAndHideImage(final ImageView img){
+        Animation fadeOut = new AlphaAnimation(1, 0);
+        fadeOut.setInterpolator(new AccelerateInterpolator());
+        fadeOut.setDuration(500);
+
+        fadeOut.setAnimationListener(new Animation.AnimationListener()
+        {
+            public void onAnimationEnd(Animation animation)
+            {
+                if(img.equals(successImg))
+                {
+                    sucnowPicPos++;
+                    sucnowPicPos %= 2;
+
+                    img.setImageResource(successImgRes[sucnowPicPos]);
+
+                    fadeInAndShowImage(img);
+                }
+                else if(img.equals(failImg))
+                {
+                    failnowPicPos++;
+                    failnowPicPos %= 2;
+
+                    img.setImageResource(failImgRes[failnowPicPos]);
+
+                    fadeInAndShowImage(img);
+                }
+
+            }
+            public void onAnimationRepeat(Animation animation) {}
+            public void onAnimationStart(Animation animation) {}
+        });
+
+        img.startAnimation(fadeOut);
+    }
+    private void fadeInAndShowImage(final ImageView img){
+        Animation fadeIn = new AlphaAnimation(0, 1);
+        fadeIn.setInterpolator(new AccelerateInterpolator());
+        fadeIn.setDuration(500);
+
+        fadeIn.setAnimationListener(new Animation.AnimationListener() {
+            public void onAnimationEnd(Animation animation) {
+                //fadeOutAndHideImage(img);
+            }
+
+            public void onAnimationRepeat(Animation animation) {
+            }
+
+            public void onAnimationStart(Animation animation) {
+            }
+        });
+
+        img.startAnimation(fadeIn);
     }
 }

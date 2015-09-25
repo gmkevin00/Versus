@@ -10,8 +10,15 @@
 
 
     <style name="MyNavigationDrawerTheme" parent="MaterialNavigationDrawerTheme">
+
+        <item name="sectionColorText">#000000</item>
         <item name="colorPrimary">#FFC107</item>
         <item name="colorPrimaryDark">#558b2f</item>
-        <item name="colorAccent">#FFFFFF</item>
+        <item name="sectionStyle">@style/MaterialSectionTheme</item>
+
+    </style>
+
+    <style name="MaterialSectionTheme" >
+        <item name="sectionColorText">#000000</item>
     </style>
 </resources>

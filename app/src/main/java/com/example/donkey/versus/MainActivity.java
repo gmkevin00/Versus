@@ -114,12 +114,13 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         p.execute(new GetUserCallback() {
             @Override
             public void done(JSONArray jsonarray) {
-                // Log.d("DebugLog",jsonarray.toString());
+                Log.d("DebugLog",jsonarray.toString());
                 try {
                     JSONObject jsonobject;
                     for (int i = 0; i < jsonarray.getJSONArray(0).length(); i++) {
                         jsonobject = jsonarray.getJSONArray(0).getJSONObject(i);
                         Room r = new Room();
+                        Log.d("DebugLog",""+Integer.parseInt(jsonobject.getString("room_id")));
                         r.setRoomId(Integer.parseInt(jsonobject.getString("room_id")));
                         r.setRoomName(jsonobject.getString("room_name"));
                         r.setChallengeId(Integer.parseInt(jsonobject.getString("challenge_id")));

@@ -8,14 +8,14 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
-
 import java.util.ArrayList;
 
 /**
  * Created by donkey on 2015/7/27.
  */
 public class RoomListAdapter extends BaseAdapter {
+    private int[] cateImgRes = {R.drawable.happying, R.drawable.studying ,R.drawable.sporting};
+
     private LayoutInflater inflater;
     private ArrayList<Room> RoomUser;
     public RoomListAdapter(Context context,ArrayList<Room> RoomUser){
@@ -53,7 +53,7 @@ public class RoomListAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         Room r=(Room)getItem(position);
-        Picasso.with(parent.getContext()).load(String.format("https://graph.facebook.com/%s/picture",r.getRoomBoss())).into(holder.photo);
+        holder.photo.setImageResource(cateImgRes[r.getTypeId()-1]);
         holder.name.setText(r.getRoomName());
         holder.start.setText(r.getRoomStart());
         holder.end.setText(r.getRoomEnd());
